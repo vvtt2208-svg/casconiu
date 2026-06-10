@@ -69,7 +69,7 @@
             background: #FF5E7E;
         }
 
-        /* Ribbon background pattern */
+        /* Ribbon background pattern - Subtle opacity bow elements */
         .bow-bg-pattern {
             background-color: #FFFDF0;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 45C52 38 60 35 64 40C68 45 60 50 50 47C40 50 32 45 36 40C40 35 48 38 50 45ZM50 47V60M50 47L42 58M50 47L58 58' fill='none' stroke='%23FFB7CA' stroke-opacity='0.15' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
@@ -139,20 +139,20 @@
                     <span class="lang-vi-text">Hành Trình 🌸</span><span class="lang-en-text">My Path 🌸</span>
                 </a>
                 <a href="#skills" class="hover:text-candy-skyBlue transition-all">
-                    <span class="lang-vi-text">Bảo Bối Truyền Tải ✨</span><span class="lang-en-text">Creative Tools ✨</span>
+                    <span class="lang-vi-text">Công Cụ Truyền Tải ✨</span><span class="lang-en-text">Creative Tools ✨</span>
                 </a>
                 <a href="#projects" class="hover:text-candy-hotPink transition-all">
                     <span class="lang-vi-text">Dòng Ký Ức Dự Án 📂</span><span class="lang-en-text">Project Memories 📂</span>
                 </a>
                 <a href="#videos-hub" class="hover:text-candy-skyBlue transition-all">
-                    <span class="lang-vi-text">Kho Video 🎥</span><span class="lang-en-text">Video Library 🎥</span>
+                    <span class="lang-vi-text">Kho Video Thực Chiến 🎥</span><span class="lang-en-text">Video Library 🎥</span>
                 </a>
                 <a href="#zen-zone" class="hover:text-candy-skyBlue transition-all">
                     <span class="lang-vi-text">Góc Bình Yên ☁️</span><span class="lang-en-text">Zen Corner ☁️</span>
                 </a>
             </nav>
 
-            <!-- Language & Call-to-action Switcher -->
+            <!-- Language Switcher Button -->
             <div class="flex items-center space-x-4">
                 <button onclick="toggleLanguage()" class="relative inline-flex h-8 w-20 items-center justify-center rounded-full bg-candy-lightBlue border-2 border-candy-skyBlue/50 p-1 cursor-pointer transition-colors duration-300">
                     <span id="lang-indicator-vi" class="absolute left-2.5 text-[10px] font-extrabold text-candy-hotPink select-none transition-all">VI</span>
@@ -219,113 +219,135 @@
             </div>
         </section>
 
-        <section id="about" class="space-y-10 scroll-mt-24">
-            <div class="text-center space-y-2">
-                <span class="text-candy-skyBlue font-cute font-bold text-sm tracking-widest block">🌸 HELLO WORLD / 鱼鱼 🌸</span>
-                <h2 class="text-3xl sm:text-4xl font-cute font-bold text-candy-dark">
-                    <span class="lang-vi-text">Hành Trình & Tính Cách</span>
-                    <span class="lang-en-text">My Path & Personality</span>
+       <!-- ABOUT ME: Playful Scrapbook Styled Path & Story -->
+        <section id="about" class="space-y-8 scroll-mt-24">
+            <div class="text-center space-y-1">
+                <span class="text-candy-skyBlue font-cute font-bold text-xs tracking-widest block">✨ Hello World! / 你好 🌸</span>
+                <h2 class="text-2xl sm:text-3xl font-cute font-bold text-candy-dark">
+                    <span class="lang-vi-text">Cá Tính & Hành Trình Của Thư</span>
+                    <span class="lang-en-text">My Path & Playful Vibe</span>
                 </h2>
-                <div class="w-24 h-1.5 bg-candy-pink mx-auto rounded-full mt-2"></div>
+                <div class="w-16 h-1.5 bg-candy-pink mx-auto rounded-full mt-2"></div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Content Grid layout with Notebook styling -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                 
-                <!-- Notebook narrative paper -->
-                <div class="lg:col-span-7 bg-white border-3 border-dashed border-candy-pink p-8 sm:p-10 rounded-[2.5rem] shadow-[0_8px_0_rgba(255,183,202,0.2)] relative">
-                    <div class="absolute -left-3.5 top-1/4 flex flex-col gap-4">
-                        <div class="w-3.5 h-6 bg-candy-yellow rounded-full border border-candy-dark/10"></div>
-                        <div class="w-3.5 h-6 bg-candy-yellow rounded-full border border-candy-dark/10"></div>
-                        <div class="w-3.5 h-6 bg-candy-yellow rounded-full border border-candy-dark/10"></div>
+                <!-- Left Main Notebook paper Column -->
+                <div class="lg:col-span-7 bg-white sketch-border-pink p-6 sm:p-8 rounded-[2rem] shadow-[0_6px_0_rgba(255,183,202,0.2)] relative">
+                    <!-- Ring spiral visualizations for notebook styling -->
+                    <div class="absolute -left-3 top-1/4 flex flex-col gap-3 select-none">
+                        <div class="w-2.5 h-5 bg-candy-yellow rounded-full border border-candy-dark/20"></div>
+                        <div class="w-2.5 h-5 bg-candy-yellow rounded-full border border-candy-dark/20"></div>
+                        <div class="w-2.5 h-5 bg-candy-yellow rounded-full border border-candy-dark/20"></div>
                     </div>
 
-                    <div class="border-l-4 border-candy-skyBlue pl-4 space-y-1">
-                        <span class="text-xs font-bold text-candy-skyBlue uppercase tracking-wider">The Chronicle</span>
-                        <h3 class="text-xl sm:text-2xl font-cute font-bold text-candy-dark">
-                            <span class="lang-vi-text">Niềm say mê từ những khung hình đầu tiên 🎬</span>
-                            <span class="lang-en-text">A lifelong devotion to frames 🎬</span>
+                    <div class="border-l-4 border-candy-skyBlue pl-3.5 space-y-0.5">
+                        <span class="text-[10px] font-bold text-candy-skyBlue tracking-wider uppercase">My Story / 故事</span>
+                        <h3 class="text-lg font-cute font-bold text-candy-dark">
+                            <span class="lang-vi-text">Bắt đầu bằng niềm mê mẩn những thước phim 🎬</span>
+                            <span class="lang-en-text">It all started with a love for video editing! 🎬</span>
                         </h3>
                     </div>
 
-                    <div class="space-y-4 text-candy-dark/95 text-sm sm:text-base leading-relaxed mt-6 font-medium">
+                    <div class="space-y-3.5 text-candy-dark/95 text-xs sm:text-sm leading-relaxed mt-5 font-medium">
                         <p class="lang-vi-text">
-                            Tớ sinh ra đã là một người luôn tràn đầy năng lượng, thích khám phá thế giới xung quanh. Từ những ngày cấp hai, tớ đã thích loay hoay làm video lyrics vietsub các ca khúc tiếng Anh yêu thích. Lúc đó chỉ là niềm vui nhỏ nhoi, nhưng nó đã nhen nhóm tình yêu kể chuyện bằng âm thanh và hình ảnh của tớ! 🌸
+                            Tớ sinh ra là một người hoạt bát, năng động và luôn khao khát khám phá những điều thú vị xung quanh. Hồi cấp hai, tớ đã thích tự mình lọ mọ làm các video chạy chữ vietsub cho những ca khúc tiếng Anh yêu thích. Lúc đó chỉ làm cho vui thôi, nhưng chính nó đã nhen nhóm lên tình yêu kể chuyện bằng hình ảnh và âm điệu của tớ. 🌸
                         </p>
                         <p class="lang-en-text">
-                            I've always been energetic and curious. Starting in middle school, I taught myself to create English Vietsub lyrics videos for my favorite songs. This little hobby kindled my deep love for visual and musical storytelling! 🌸
+                            I've always been highly energetic and curious. Back in middle school, I self-taught myself to synchronize lyrics and create English Vietsubs for songs I loved. It was just a little hobby, but it sparked a lifelong love for visual storytelling. 🌸
                         </p>
 
                         <p class="lang-vi-text">
-                            Lên cấp ba, trong vai trò Bí thư Đoàn trường, tớ có cơ hội lập kế hoạch truyền thông, quản lý fanpage học sinh và dẫn dắt các dự án từ thủa sơ khai. Tuy chọn ngành Ngôn ngữ Trung theo định hướng của gia đình, ngọn lửa đam mê Marketing trong tớ chưa bao giờ tắt và may mắn nhận được sự ủng hộ tuyệt đối của bố mẹ! 🥰
+                            Lên cấp ba, vai trò Bí thư đoàn trường đã rèn luyện cho tớ kỹ năng lập kế hoạch truyền thông, quản lý fanpage học sinh và dẫn dắt các dự án từ những viên gạch đầu tiên. Dù học <strong class="text-candy-hotPink">Ngôn ngữ Trung</strong> theo định hướng gia đình, ngọn lửa đam mê Marketing của tớ vẫn luôn bừng cháy và được mọi người ủng hộ hết mình! 🥰
                         </p>
                         <p class="lang-en-text">
-                            In high school, as the Youth Union Secretary, I stepped up to coordinate school media channels and build brand identity from scratch. Despite studying Chinese Language due to family guidance, my passion for Marketing burned brightly and eventually won full family support! 🥰
+                            In high school, serving as the School Youth Secretary trained me to manage digital fanpages and execute community projects. Although I majored in <strong class="text-candy-hotPink">Chinese Language</strong> based on family guidelines, my inner fire for Marketing has never dimmed, and I'm blessed to have full family support! 🥰
                         </p>
+                    </div>
+
+                    <!-- Warm wisdom note style -->
+                    <div class="mt-5 p-3.5 rounded-2xl bg-candy-lightBlue border-2 border-candy-blue/40 flex items-start gap-2.5">
+                        <span class="text-xl">💡</span>
+                        <div class="space-y-0.5">
+                            <p class="text-[10px] font-extrabold text-candy-skyBlue tracking-wider uppercase">Life-changing Advice</p>
+                            <p class="font-sans font-medium italic text-[11px] text-candy-dark/90 leading-relaxed">
+                                <span class="lang-vi-text">"Nếu hơi thở mà mình còn không giữ lại được, thì trên đời này điều gì thật sự là của mình?" — Lời dạy từ người sếp đáng kính giúp tớ giữ tâm bình thản trước mọi giông bão.</span>
+                                <span class="lang-en-text">"If you cannot even hold on to your breath, what in this world is truly yours?" — Wise advice from my mentor, helping me stay calm amidst challenges.</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Right advice sidebar featuring CEO Lâm Văn Trung -->
-                <div class="lg:col-span-5 flex flex-col gap-6">
+                <!-- Right Sidebar Column: Wisdom & Strengths -->
+                <div class="lg:col-span-5 flex flex-col gap-4">
                     
-                    <!-- Sticky note featuring transparent 3D mentor photo -->
-                    <div class="bg-white border-3 border-candy-pink/60 p-6 rounded-[2.5rem] shadow-[0_8px_0_rgba(255,183,202,0.15)] flex flex-col gap-4">
-                        <span class="text-xs font-bold text-candy-hotPink uppercase tracking-wider block font-cute">My Inspiring Mentor / Người Thầy 💡</span>
-                        
-                        <!-- 1.jpg image rendering -->
-                        <div class="w-full h-56 rounded-2xl bg-gradient-to-tr from-candy-lightYellow to-candy-lightPink overflow-hidden border-2 border-dashed border-candy-pink relative flex items-center justify-center">
-                            <img src="1.jpg" alt="CEO Lâm Văn Trung và Thư" class="w-full h-full object-cover object-top" onerror="this.src='https://placehold.co/300x250/FFB7CA/FFFFFF?text=CEO+Lam+Van+Trung'">
-                            <div class="absolute bottom-2 left-2 right-2 bg-white/90 backdrop-blur-sm py-1.5 px-3 rounded-xl border border-candy-pink/30 text-center">
-                                <span class="text-[11px] font-bold text-candy-dark block"><span class="lang-vi-text">CEO Lâm Văn Trung & Thư</span><span class="lang-en-text">CEO Lam Van Trung & Thu</span></span>
-                            </div>
-                        </div>
-
-                        <div class="space-y-2 bg-candy-lightYellow/50 p-4 rounded-2xl border border-candy-yellow">
-                            <span class="text-[10px] font-extrabold text-candy-dark/60 uppercase">Life-changing Advice</span>
-                            <blockquote class="font-sans font-semibold italic text-xs leading-relaxed text-candy-dark">
-                                <span class="lang-vi-text">"Nếu hơi thở mà mình còn không giữ lại được, thì trên đời này điều gì thật sự là của mình?" — Câu nói của người sếp đáng kính giúp tớ giữ lòng bình thản trước biến động.</span>
-                                <span class="lang-en-text">"If you cannot even hold on to your own breath, what in this world is truly yours?" — Deep advice from my mentor helping me stay calm through life's storms.</span>
+                    <!-- Colorful Sticky Note Quote -->
+                    <div class="bg-candy-yellow border-3 border-candy-dark/15 p-5 rounded-[2rem] shadow-[0_6px_0_rgba(0,0,0,0.06)] relative transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                        <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-14 h-5 bg-white/70 backdrop-blur-sm rounded-md shadow-sm border border-candy-dark/10"></div>
+                        <div class="space-y-3 pt-1.5">
+                            <span class="text-[10px] font-bold text-candy-dark/60 uppercase tracking-wider block">My Lifesaver Motto / 箴言</span>
+                            <blockquote class="text-base font-cute font-bold text-candy-dark leading-snug">
+                                "No one's gonna save you now, so you better save yourself."
                             </blockquote>
+                            <p class="text-[11px] text-candy-dark/85 leading-relaxed font-sans font-medium">
+                                <span class="lang-vi-text">Không ai giải quyết vấn đề của bạn tốt hơn chính bạn. Đó là trải nghiệm sâu sắc giúp tớ đứng dậy mạnh mẽ sau mọi khó khăn.</span>
+                                <span class="lang-en-text">No one else can solve your problems but yourself. This core truth is my personal anchor through emotional hardships.</span>
+                            </p>
                         </div>
                     </div>
 
-                    <!-- Vinyl quote sticker inspired by After the Storm -->
-                    <div class="bg-candy-yellow border-3 border-candy-dark/15 p-6 rounded-[2.5rem] shadow-[0_8px_0_rgba(0,0,0,0.05)] flex items-center gap-4 relative">
-                        <!-- Spinning record player mini animation -->
-                        <div class="relative w-20 h-20 flex-shrink-0">
-                            <div class="absolute inset-0 bg-black rounded-full spin-vinyl border-4 border-candy-dark shadow-md flex items-center justify-center">
-                                <div class="w-7 h-7 bg-white rounded-full flex items-center justify-center border-2 border-dashed border-candy-hotPink">
-                                    <span class="text-[8px] font-bold text-candy-hotPink">STS</span>
+                    <!-- Core Values Card -->
+                    <div class="bg-white border-3 border-candy-pink/50 p-5 rounded-[2rem] shadow-[0_6px_0_rgba(255,183,202,0.15)] space-y-3.5">
+                        <h4 class="font-cute font-bold text-candy-dark text-base flex items-center gap-1.5">
+                            <span>🎀</span>
+                            <span class="lang-vi-text">Kim Chỉ Nam Trái Tim</span>
+                            <span class="lang-en-text">My Core Values</span>
+                        </h4>
+                        
+                        <div class="space-y-2.5 font-sans font-semibold text-xs">
+                            <!-- Value 1 -->
+                            <div class="flex items-center gap-2.5 p-2 bg-candy-lightPink/80 rounded-xl border border-candy-pink/20">
+                                <span class="w-6 h-6 flex items-center justify-center bg-candy-pink text-white rounded-full font-bold text-[10px]">01</span>
+                                <div>
+                                    <strong class="text-[11px] text-candy-dark block"><span class="lang-vi-text">Trách nhiệm</span><span class="lang-en-text">Responsibility</span></strong>
+                                    <span class="text-[9px] text-candy-dark/60"><span class="lang-vi-text">Luôn đặt chữ Tâm lên đầu việc.</span><span class="lang-en-text">Reliable in every single task.</span></span>
                                 </div>
                             </div>
-                            <div class="absolute top-0 right-0 w-3 h-3 bg-red-400 rounded-full border border-white"></div>
-                        </div>
-
-                        <div class="space-y-1.5 flex-1">
-                            <span class="text-[9px] font-bold text-candy-hotPink tracking-wider uppercase block font-cute">⚡ Inspiration Song - After the Storm</span>
-                            <blockquote class="text-sm font-cute font-bold text-candy-dark leading-tight">
-                                "No one's gonna save you now, so you better save yourself."
-                            </blockquote>
-                            <p class="text-[10px] text-candy-dark/80 font-semibold">
-                                <span class="lang-vi-text">Trải nghiệm vượt qua cảm xúc tiêu cực đã dạy tớ phải luôn đứng dậy để tự cứu lấy cuộc đời mình.</span>
-                                <span class="lang-en-text">Emotional hardships taught me that no one else can save me, I must choose to save myself.</span>
-                            </p>
+                            <!-- Value 2 -->
+                            <div class="flex items-center gap-2.5 p-2 bg-candy-lightBlue/80 rounded-xl border border-candy-blue/20">
+                                <span class="w-6 h-6 flex items-center justify-center bg-candy-skyBlue text-white rounded-full font-bold text-[10px]">02</span>
+                                <div>
+                                    <strong class="text-[11px] text-candy-dark block"><span class="lang-vi-text">Nhiệt huyết lăn xả</span><span class="lang-en-text">Devotion</span></strong>
+                                    <span class="text-[9px] text-candy-dark/60"><span class="lang-vi-text">Sẵn sàng dành thời gian để việc tốt nhất.</span><span class="lang-en-text">Going the extra mile.</span></span>
+                                </div>
+                            </div>
+                            <!-- Value 3 -->
+                            <div class="flex items-center gap-2.5 p-2 bg-candy-lightYellow/80 rounded-xl border border-candy-yellow/30">
+                                <span class="w-6 h-6 flex items-center justify-center bg-candy-yellow text-candy-dark/80 rounded-full font-bold text-[10px]">03</span>
+                                <div>
+                                    <strong class="text-[11px] text-candy-dark block"><span class="lang-vi-text">Kết nối ấm áp</span><span class="lang-en-text">Warm Connection</span></strong>
+                                    <span class="text-[9px] text-candy-dark/60"><span class="lang-vi-text">Yêu thích việc xây dựng cộng đồng.</span><span class="lang-en-text">Enjoys building cozy teams.</span></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="space-y-10 scroll-mt-24">
-            <div class="text-center space-y-2">
-                <span class="text-candy-hotPink font-cute font-bold text-sm tracking-widest block">🚀 MY TOOLBOX / 媒介 ✨</span>
-                <h2 class="text-3xl sm:text-4xl font-cute font-bold text-candy-dark">
-                    <span class="lang-vi-text">Công Cụ Truyền Tải Cảm Xúc</span>
-                    <span class="lang-en-text">My Emotional Transmission Tools</span>
+        <!-- SKILLS: Beautiful Bubbly Power-up Cards -->
+        <section id="skills" class="space-y-8 scroll-mt-24">
+            <div class="text-center space-y-1">
+                <span class="text-candy-hotPink font-cute font-bold text-xs tracking-widest block">🚀 My Power-ups / Kỹ Năng ✨</span>
+                <h2 class="text-2xl sm:text-3xl font-cute font-bold text-candy-dark">
+                    <span class="lang-vi-text">Bảo Bối Sáng Tạo Của Cá Con</span>
+                    <span class="lang-en-text">My Creative Magic Arsenal</span>
                 </h2>
-                <div class="w-24 h-1.5 bg-candy-pink/60 mx-auto rounded-full mt-2"></div>
+                <div class="w-16 h-1.5 bg-candy-pink/60 mx-auto rounded-full mt-2"></div>
             </div>
 
-           <!-- Skills candy boxes -->
+            <!-- Skills candy boxes -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 font-sans">
                 
                 <!-- Skill Card 1: Content -->
@@ -435,8 +457,21 @@
                         </div>
                     </div>
                 </div>
-  
+
             </div>
+
+            <!-- Beautiful hand-drawn warning takeaway lesson banner -->
+            <div class="p-5 rounded-[2.2rem] bg-candy-cream border-3 border-dashed border-candy-pink/50 max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left relative shadow-sm">
+                <span class="text-3xl float-pink">🎀</span>
+                <div class="space-y-0.5">
+                    <h4 class="font-cute font-bold text-[10px] text-candy-hotPink uppercase tracking-wider"><span class="lang-vi-text">Bài Học Thấm Thía Để Thành Công</span><span class="lang-en-text">My Deepest Lesson Learned</span></h4>
+                    <p class="text-[11px] text-candy-dark/85 font-semibold leading-relaxed">
+                        <span class="lang-vi-text">"Một dự án hoàn hảo không chỉ nhờ ý tưởng hay, mà là việc chuẩn bị quy trình chi li, phân công rõ ràng và kiểm soát dữ liệu ngay từ đầu." — Bài học rút ra sau sự cố thiếu hình ảnh tại sự kiện lớn.</span>
+                        <span class="lang-en-text">"A perfect campaign requires step-by-step prep, strict task delegation & tracking media assets from day one, not just creative flow." — Saved from a major event deficit.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
 
             <!-- Deep professional lesson learned card -->
             <div class="p-6 rounded-[2.5rem] bg-candy-cream border-3 border-dashed border-candy-pink max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left relative shadow-sm">
@@ -472,110 +507,109 @@
             <!-- Card grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 font-sans" id="projects-grid">
                 
-                <!-- Project 1: NamHa 1720 -->
-                <div class="project-card filter-media filter-social bg-white border-3 border-candy-pink rounded-[2.5rem] overflow-hidden shadow-[0_8px_0_rgba(255,183,202,0.2)] flex flex-col justify-between">
-                    <div>
-                        <!-- Bubbly Gradient Header -->
-                        <div class="bg-gradient-to-tr from-candy-pink to-[#FFA4BA] p-6 text-candy-dark relative">
-                            <div class="absolute right-4 bottom-4 text-4xl opacity-45 float-pink">🎬</div>
-                            <div class="flex justify-between items-start">
-                                <span class="text-[10px] bg-white/50 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">NamHa 1720 Entertainment</span>
-                                <span class="text-[10px] font-bold text-white bg-candy-hotPink px-2.5 py-0.5 rounded-full">President & Lead</span>
-                            </div>
-                            <h3 class="text-2xl font-cute font-bold mt-4">NamHa 1720 Entertainment</h3>
-                            <p class="text-xs font-semibold mt-1">
-                                <span class="lang-vi-text">Cộng đồng truyền thông học đường năng động của tớ</span>
-                                <span class="lang-en-text">A bubbly high school media creative community</span>
-                            </p>
+             <div class="project-card filter-media filter-social bg-white border-3 border-candy-pink rounded-[2.5rem] overflow-hidden shadow-[0_8px_0_rgba(255,183,202,0.2)] flex flex-col justify-between">
+    <div>
+        <div class="bg-gradient-to-tr from-candy-pink to-[#FFA4BA] p-6 text-candy-dark relative">
+            <div class="absolute right-4 bottom-4 text-4xl opacity-45 float-pink">🎬</div>
+            <div class="flex justify-between items-start">
+                <span class="text-[10px] bg-white/50 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">NamHa 1720 Entertainment</span>
+                <span class="text-[10px] font-bold text-white bg-candy-hotPink px-2.5 py-0.5 rounded-full">President & Lead</span>
+            </div>
+            <h3 class="text-2xl font-cute font-bold mt-4">NamHa 1720 Entertainment</h3>
+            <p class="text-xs font-semibold mt-1">
+                <span class="lang-vi-text">Cộng đồng truyền thông học đường năng động của tớ</span>
+                <span class="lang-en-text">A bubbly high school media creative community</span>
+            </p>
+        </div>
+
+        <div class="p-6 space-y-6">
+            <div class="space-y-2">
+                <span class="text-xs font-bold text-candy-hotPink uppercase tracking-wider block"><span class="lang-vi-text">Hình ảnh tại NamHa1720 </span><span class="lang-en-text">High School Snaps (Swipe / Toggle)</span></span>
+                <div class="relative w-full h-48 rounded-2xl overflow-hidden border-2 border-candy-pink/30 group">
+                    <div id="carousel-track" class="flex w-full h-full transition-transform duration-500">
+                        <div class="w-full h-full flex-shrink-0">
+                            <img src="https://docs.google.com/uc?export=download&id=1KIaBoBC-L-P9J8X6imAq-b4lepOt5ZKP" alt="Học sinh Namha" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x250/FFB7CA/FFFFFF?text=Namha+1'">
                         </div>
-
-                        <!-- Card Body -->
-                        <div class="p-6 space-y-6">
-                            <!-- High Quality sliding carousel of image_7a1771.jpg & image_7a0bed.jpg -->
-                            <div class="space-y-2">
-                                <span class="text-xs font-bold text-candy-hotPink uppercase tracking-wider block"><span class="lang-vi-text">Hình ảnh Học đường NamHa (Vuốt qua lại)</span><span class="lang-en-text">High School Snaps (Swipe / Toggle)</span></span>
-                                <div class="relative w-full h-48 rounded-2xl overflow-hidden border-2 border-candy-pink/30 group">
-                                    <div id="carousel-track" class="flex w-full h-full transition-transform duration-500">
-                                        <div class="w-full h-full flex-shrink-0">
-                                            <img src="image_7a1771.jpg" alt="Học sinh Namha" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x250/FFB7CA/FFFFFF?text=Namha+1'">
-                                        </div>
-                                        <div class="w-full h-full flex-shrink-0">
-                                            <img src="image_7a0bed.jpg" alt="Tập thể Namha" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x250/FFB7CA/FFFFFF?text=Namha+2'">
-                                        </div>
-                                    </div>
-                                    <!-- Carousel controllers -->
-                                    <button onclick="toggleCarousel(0)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/85 text-candy-hotPink flex items-center justify-center shadow focus:outline-none hover:bg-white"><i class="fa-solid fa-chevron-left text-xs"></i></button>
-                                    <button onclick="toggleCarousel(1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/85 text-candy-hotPink flex items-center justify-center shadow focus:outline-none hover:bg-white"><i class="fa-solid fa-chevron-right text-xs"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="space-y-2 text-xs">
-                                <h4 class="text-[11px] font-bold text-candy-hotPink uppercase tracking-wider">Metrics Achieved</h4>
-                                <ul class="space-y-1.5 list-disc list-inside font-semibold text-candy-dark/95">
-                                    <li><span class="lang-vi-text">Tăng 4.000+ người theo dõi trong 2 tháng đầu hoạt động</span><span class="lang-en-text">Grew over 4,000+ followers in just 2 months</span></li>
-                                    <li><span class="lang-vi-text">Đồng loạt các clip đạt từ 10.000 đến 20.000 lượt xem tự nhiên</span><span class="lang-en-text">Consistently scored 10k - 20k organic views per clip</span></li>
-                                </ul>
-                            </div>
+                        <div class="w-full h-full flex-shrink-0">
+                            <img src="https://docs.google.com/uc?export=download&id=138gEDyghxAvjnf7amR6MfWWPiOkhpTpD" alt="Tập thể Namha" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x250/FFB7CA/FFFFFF?text=Namha+2'">
                         </div>
                     </div>
-
-                    <!-- Card Footer -->
-                    <div class="px-6 py-4 bg-candy-lightPink/20 border-t-2 border-dashed border-candy-pink/15 flex justify-between items-center text-xs">
-                        <span class="text-candy-dark/60 font-bold italic">✨ School Spirit Project</span>
-                        <a href="https://drive.google.com/drive/folders/1tEUZDuZ786xNVjn5bvDqvmLX6TdZoEaJ" target="_blank" class="text-candy-hotPink font-cute font-bold flex items-center gap-1 hover:underline">
-                            <span class="lang-vi-text">Xem tất cả ảnh 🌸</span><span class="lang-en-text">View all photos 🌸</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </a>
-                    </div>
+                    <button onclick="toggleCarousel(0)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/85 text-candy-hotPink flex items-center justify-center shadow focus:outline-none hover:bg-white"><i class="fa-solid fa-chevron-left text-xs"></i></button>
+                    <button onclick="toggleCarousel(1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/85 text-candy-hotPink flex items-center justify-center shadow focus:outline-none hover:bg-white"><i class="fa-solid fa-chevron-right text-xs"></i></button>
                 </div>
+            </div>
 
-                <!-- Project 2: AGGA Seminar -->
-                <div class="project-card filter-media filter-events bg-white border-3 border-candy-blue rounded-[2.5rem] overflow-hidden shadow-[0_8px_0_rgba(56,189,248,0.2)] flex flex-col justify-between">
-                    <div>
-                        <!-- Bubbly Blue Header -->
-                        <div class="bg-gradient-to-tr from-candy-blue to-[#95D1EC] p-6 text-candy-dark relative">
-                            <div class="absolute right-4 bottom-4 text-4xl opacity-45 float-blue">💎</div>
-                            <div class="flex justify-between items-start">
-                                <span class="text-[10px] bg-white/50 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">AGGA Aesthetic</span>
-                                <span class="text-[10px] font-bold text-white bg-candy-skyBlue px-2.5 py-0.5 rounded-full">Media Coordinator</span>
-                            </div>
-                            <h3 class="text-2xl font-cute font-bold mt-4">AGGA Seminar</h3>
-                            <p class="text-xs font-semibold mt-1">
-                                <span class="lang-vi-text">Hội nghị tầm cỡ Viện Thẩm Mỹ Quốc Tế AGGA</span>
-                                <span class="lang-en-text">International Aesthetic Institute Seminar</span>
-                            </p>
-                        </div>
+            <div class="space-y-2 text-xs">
+                <h4 class="text-[11px] font-bold text-candy-hotPink uppercase tracking-wider">Metrics Achieved</h4>
+                <ul class="space-y-1.5 list-disc list-inside font-semibold text-candy-dark/95">
+                    <li><span class="lang-vi-text">Tăng 4.000+ người theo dõi trong 2 tháng đầu hoạt động</span><span class="lang-en-text">Grew over 4,000+ followers in just 2 months</span></li>
+                    <li><span class="lang-vi-text">Đồng loạt các clip đạt từ 10.000 đến 20.000 lượt xem tự nhiên</span><span class="lang-en-text">Consistently scored 10k - 20k organic views per clip</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-                        <!-- Card Body -->
-                        <div class="p-6 space-y-6">
-                            <!-- TVC drive file mockup play link -->
-                            <div class="space-y-2">
-                                <span class="text-xs font-bold text-candy-skyBlue uppercase tracking-wider block"><span class="lang-vi-text">TVC Thẩm Mỹ Recap Sự Kiện</span><span class="lang-en-text">Recap TVC Playback</span></span>
-                                <a href="https://drive.google.com/file/d/1xXypiCidvyU8j2Cqp5A21B34mmZcg5UI/view?usp=sharing" target="_blank" class="block w-full h-40 rounded-2xl bg-gradient-to-tr from-[#95D1EC] to-candy-blue/30 overflow-hidden relative group border-2 border-candy-blue/40 shadow-inner flex items-center justify-center">
-                                    <div class="w-14 h-14 rounded-full bg-white/90 shadow-md flex items-center justify-center text-candy-skyBlue text-xl group-hover:scale-110 transition-transform">
-                                        <i class="fa-solid fa-play ml-1"></i>
-                                    </div>
-                                    <div class="absolute bottom-2 left-2 bg-black/50 text-white text-[10px] px-2 py-0.5 rounded font-bold">AGGA Seminar TVC</div>
-                                </a>
-                            </div>
+    <div class="px-6 py-4 bg-candy-lightPink/20 border-t-2 border-dashed border-candy-pink/15 flex justify-between items-center text-xs">
+        <span class="text-candy-dark/60 font-bold italic">✨ School Spirit Project</span>
+        <a href="https://drive.google.com/drive/folders/1tEUZDuZ786xNVjn5bvDqvmLX6TdZoEaJ" target="_blank" class="text-candy-hotPink font-cute font-bold flex items-center gap-1 hover:underline">
+            <span class="lang-vi-text">Xem tất cả ảnh 🌸</span><span class="lang-en-text">View all photos 🌸</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+    </div>
+</div>
 
-                            <div class="space-y-2 text-xs">
-                                <h4 class="text-[11px] font-bold text-candy-skyBlue uppercase tracking-wider">Scale & Success</h4>
-                                <ul class="space-y-1.5 list-disc list-inside font-semibold text-candy-dark/95">
-                                    <li><span class="lang-vi-text">Điều phối thiết lập thiết bị ghi âm ghi hình chuyên nghiệp</span><span class="lang-en-text">Coordinated professional audio-visual setup</span></li>
-                                    <li><span class="lang-vi-text">Quản lý luồng tư liệu phục vụ kế hoạch marketing lâu dài</span><span class="lang-en-text">Managed digital assets optimized for ongoing campaigns</span></li>
-                                </ul>
-                            </div>
-                        </div>
+               <div class="project-card filter-media filter-events bg-white border-3 border-candy-blue rounded-[2.5rem] overflow-hidden shadow-[0_8px_0_rgba(56,189,248,0.2)] flex flex-col justify-between">
+    <div>
+        <div class="bg-gradient-to-tr from-candy-blue to-[#95D1EC] p-6 text-candy-dark relative">
+            <div class="absolute right-4 bottom-4 text-4xl opacity-45 float-blue">💎</div>
+            <div class="flex justify-between items-start">
+                <span class="text-[10px] bg-white/50 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">AGGA Aesthetic</span>
+                <span class="text-[10px] font-bold text-white bg-candy-skyBlue px-2.5 py-0.5 rounded-full">Media Coordinator</span>
+            </div>
+            <h3 class="text-2xl font-cute font-bold mt-4">AGGA Seminar</h3>
+            <p class="text-xs font-semibold mt-1">
+                <span class="lang-vi-text">Hội thảo Viện Thẩm Mỹ Quốc Tế AGGA</span>
+                <span class="lang-en-text">International Aesthetic Institute Seminar</span>
+            </p>
+        </div>
+
+        <div class="p-6 space-y-6">
+            <div class="space-y-2">
+                <span class="text-xs font-bold text-candy-skyBlue uppercase tracking-wider block"><span class="lang-vi-text">TVC Thẩm Mỹ</span><span class="lang-en-text">Recap TVC Playback</span></span>
+                <a href="https://drive.google.com/file/d/1xXypiCidvyU8j2Cqp5A21B34mmZcg5UI/view?usp=sharing" target="_blank" class="block w-full h-40 rounded-2xl bg-gradient-to-tr from-[#95D1EC] to-candy-blue/30 overflow-hidden relative group border-2 border-candy-blue/40 shadow-inner flex items-center justify-center">
+                    
+                    <div class="absolute inset-0 bg-cover bg-center filter brightness-90 transition-all duration-300 group-hover:scale-105" style="background-image: url('https://docs.google.com/uc?export=download&id=1Y04No5UNlxPEFkiZzId9mHvKBMdazRsi');"></div>
+                    <div class="absolute inset-0 bg-black/10"></div>
+                    
+                    <div class="relative z-10 w-14 h-14 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-candy-skyBlue text-xl opacity-80 transform group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+                        <i class="fa-solid fa-play ml-1"></i>
                     </div>
-
-                    <!-- Card Footer -->
-                    <div class="px-6 py-4 bg-candy-lightBlue/20 border-t-2 border-dashed border-candy-blue/15 flex justify-between items-center text-xs">
-                        <span class="text-candy-dark/60 font-bold italic">📈 Corporate Outreach</span>
-                        <a href="https://drive.google.com/file/d/1xXypiCidvyU8j2Cqp5A21B34mmZcg5UI/view?usp=sharing" target="_blank" class="text-candy-skyBlue font-cute font-bold flex items-center gap-1 hover:underline">
-                            <span class="lang-vi-text">Mở video TVC 🎥</span><span class="lang-en-text">Open TVC video 🎥</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </a>
+                    
+                    <div class="absolute top-2 right-2 bg-[#25D366] text-white text-[9px] px-2 py-0.5 rounded-full font-extrabold flex items-center gap-1">
+                        <i class="fa-solid fa-cloud"></i> Google Drive TVC
                     </div>
-                </div>
+                    <div class="absolute bottom-2 left-2 bg-black/60 text-white text-[10px] px-2.5 py-1 rounded-md font-bold max-w-[90%] truncate">
+                        AGGA Seminar TVC Recaps
+                    </div>
+                </a>
+            </div>
+
+            <div class="space-y-2 text-xs">
+                <h4 class="text-[11px] font-bold text-candy-skyBlue uppercase tracking-wider">Scale & Success</h4>
+                <ul class="space-y-1.5 list-disc list-inside font-semibold text-candy-dark/95">
+                    <li><span class="lang-vi-text">Điều phối thiết lập thiết bị ghi âm ghi hình chuyên nghiệp</span><span class="lang-en-text">Coordinated professional audio-visual setup</span></li>
+                    <li><span class="lang-vi-text">Quản lý luồng tư liệu phục vụ kế hoạch marketing lâu dài</span><span class="lang-en-text">Managed digital assets optimized for ongoing campaigns</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-6 py-4 bg-candy-lightBlue/20 border-t-2 border-dashed border-candy-blue/15 flex justify-between items-center text-xs">
+        <span class="text-candy-dark/60 font-bold italic">✨ Corporate Outreach</span>
+        <a href="https://drive.google.com/file/d/1xXypiCidvyU8j2Cqp5A21B34mmZcg5UI/view?usp=sharing" target="_blank" class="text-candy-skyBlue font-cute font-bold flex items-center gap-1 hover:underline">
+            <span class="lang-vi-text">Xem video TVC 🎥</span><span class="lang-en-text">Open TVC video 🎥</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+    </div>
+</div>
 
                 <!-- Project 3: Mindfulness Session -->
                 <div class="project-card filter-events bg-white border-3 border-candy-yellow rounded-[2.5rem] overflow-hidden shadow-[0_8px_0_rgba(255,245,157,0.3)] flex flex-col justify-between">
@@ -589,7 +623,7 @@
                             </div>
                             <h3 class="text-2xl font-cute font-bold mt-4">Mindfulness Session</h3>
                             <p class="text-xs font-semibold mt-1">
-                                <span class="lang-vi-text">Khóa thiền ý nghĩa cho hơn 500 học sinh</span>
+                                <span class="lang-vi-text">Khóa thiền ý nghĩa cho gần 500 học sinh</span>
                                 <span class="lang-en-text">Guiding meditation session for 500 teenagers</span>
                             </p>
                         </div>
@@ -598,7 +632,7 @@
                         <div class="p-6 space-y-6">
                             <!-- Chèn hình ảnh 5 (20260117_125933.jpg) và 6 (20260117_125837.jpg) -->
                             <div class="space-y-2">
-                                <span class="text-xs font-bold text-candy-dark/70 uppercase tracking-wider block"><span class="lang-vi-text">Không Gian Tập Huấn Chánh Niệm</span><span class="lang-en-text">Meditation Hall Visuals</span></span>
+                                <span class="text-xs font-bold text-candy-dark/70 uppercase tracking-wider block"><span class="lang-vi-text">Không gian tĩnh lặng của các bạn nhỏ học sinh</span><span class="lang-en-text">Meditation Hall Visuals</span></span>
                                 <div class="grid grid-cols-2 gap-2">
                                     <div class="h-28 rounded-xl overflow-hidden border border-candy-yellow/40">
                                         <img src="20260117_125933.jpg" alt="Lớp học thiền" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/200x120/FFF59D/FFFFFF?text=Classroom'">
@@ -653,10 +687,18 @@
                             <div class="space-y-2">
                                 <span class="text-xs font-bold text-candy-hotPink uppercase tracking-wider block"><span class="lang-vi-text">Review Tết Đạt Triệu Lượt Xem</span><span class="lang-en-text">Viral Spring Recap Video</span></span>
                                 <a href="https://www.facebook.com/share/v/1BGJnLSgEb/" target="_blank" class="block w-full h-40 rounded-2xl bg-gradient-to-tr from-[#FF9E80] to-candy-pink/30 overflow-hidden relative group border-2 border-candy-pink/40 shadow-inner flex items-center justify-center">
-                                    <div class="w-14 h-14 rounded-full bg-white/90 shadow-md flex items-center justify-center text-candy-hotPink text-xl group-hover:scale-110 transition-transform">
+                                    <!-- High fidelity simulated thumbnail with gradient + FB play badge -->
+                                    <div class="absolute inset-0 bg-cover bg-center filter brightness-95 transition-all duration-300 group-hover:scale-105" style="background-image: linear-gradient(135deg, #FF9E80 0%, #FF5E7E 100%);"></div>
+                                    <div class="absolute inset-0 bg-black/10"></div>
+                                    <div class="relative z-10 w-14 h-14 rounded-full bg-white/95 shadow-lg flex items-center justify-center text-candy-hotPink text-xl transform group-hover:scale-110 transition-transform duration-300">
                                         <i class="fa-solid fa-play ml-1"></i>
                                     </div>
-                                    <div class="absolute bottom-2 left-2 bg-black/50 text-white text-[10px] px-2 py-0.5 rounded font-bold">Thiền Tâm Resort Video</div>
+                                    <div class="absolute top-2 right-2 bg-[#1877F2] text-white text-[9px] px-2 py-0.5 rounded-full font-extrabold flex items-center gap-1">
+                                        <i class="fa-brands fa-facebook"></i> Facebook Video
+                                    </div>
+                                    <div class="absolute bottom-2 left-2 bg-black/60 text-white text-[10px] px-2.5 py-1 rounded-md font-bold max-w-[90%] truncate">
+                                        Thiền Tâm Wellness Resort Holiday Check-in
+                                    </div>
                                 </a>
                             </div>
 
@@ -705,133 +747,229 @@
                 
                 <!-- Tab A: TikTok Comedy -->
                 <div id="folder-short-comedy" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-sans font-semibold text-xs">
-                    <!-- Link 1 -->
-                    <div class="p-4 bg-white border-2 border-candy-pink/50 rounded-2xl shadow-sm flex flex-col justify-between">
-                        <div class="space-y-2">
-                            <span class="text-xs text-candy-hotPink block font-bold">TikTok Video #1</span>
-                            <p class="text-candy-dark leading-snug"><span class="lang-vi-text">Tiêu đề: Video hài ngắn về ông ngoại hài hước, mang tiếng cười sảng khoái.</span><span class="lang-en-text">Funny TikTok clip with grandpa spreading wholesome family laughter.</span></p>
-                        </div>
-                        <a href="https://www.tiktok.com/@trungagga/video/7632995777387842834" target="_blank" class="mt-4 inline-flex items-center justify-center px-4 py-2 bg-candy-pink text-white rounded-xl hover:bg-candy-hotPink transition-colors gap-1.5 font-cute font-bold text-[10px]">
-                            <span>Play TikTok</span> <i class="fa-brands fa-tiktok"></i>
+                    <!-- Video 1 -->
+                    <div class="bg-white border-2 border-candy-pink/50 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-candy-pink transition-all">
+                        <a href="https://www.tiktok.com/@trungagga/video/7632995777387842834" target="_blank" class="block w-full h-32 relative group">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#121212] to-[#252525] flex items-center justify-center">
+                                <span class="text-3xl">🍿</span>
+                            </div>
+                            <div class="absolute top-2 right-2 bg-black/60 text-white text-[8px] px-2 py-0.5 rounded flex items-center gap-1">
+                                <i class="fa-brands fa-tiktok"></i> TikTok
+                            </div>
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black shadow"><i class="fa-solid fa-play ml-0.5"></i></div>
+                            </div>
                         </a>
+                        <div class="p-3 space-y-1.5">
+                            <span class="text-[9px] uppercase tracking-wider text-candy-hotPink font-extrabold">TikTok Video #1</span>
+                            <p class="text-candy-dark leading-snug font-bold line-clamp-2"><span class="lang-vi-text">Video hài ngắn về ông ngoại hài hước, mang tiếng cười sảng khoái.</span><span class="lang-en-text">Funny TikTok clip with grandpa spreading wholesome family laughter.</span></p>
+                        </div>
                     </div>
-                    <!-- Link 2 -->
-                    <div class="p-4 bg-white border-2 border-candy-pink/50 rounded-2xl shadow-sm flex flex-col justify-between">
-                        <div class="space-y-2">
-                            <span class="text-xs text-candy-hotPink block font-bold">TikTok Video #2</span>
-                            <p class="text-candy-dark leading-snug"><span class="lang-vi-text">Tiêu đề: Khám phá những mẩu chuyện nhỏ thường ngày hài hước.</span><span class="lang-en-text">Relatable TikTok comedy segment featuring fun everyday moments.</span></p>
-                        </div>
-                        <a href="https://www.tiktok.com/@trungagga/video/7630380226748370183" target="_blank" class="mt-4 inline-flex items-center justify-center px-4 py-2 bg-candy-pink text-white rounded-xl hover:bg-candy-hotPink transition-colors gap-1.5 font-cute font-bold text-[10px]">
-                            <span>Play TikTok</span> <i class="fa-brands fa-tiktok"></i>
+                    <!-- Video 2 -->
+                    <div class="bg-white border-2 border-candy-pink/50 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-candy-pink transition-all">
+                        <a href="https://www.tiktok.com/@trungagga/video/7630380226748370183" target="_blank" class="block w-full h-32 relative group">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#252525] to-[#121212] flex items-center justify-center">
+                                <span class="text-3xl">😄</span>
+                            </div>
+                            <div class="absolute top-2 right-2 bg-black/60 text-white text-[8px] px-2 py-0.5 rounded flex items-center gap-1">
+                                <i class="fa-brands fa-tiktok"></i> TikTok
+                            </div>
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black shadow"><i class="fa-solid fa-play ml-0.5"></i></div>
+                            </div>
                         </a>
+                        <div class="p-3 space-y-1.5">
+                            <span class="text-[9px] uppercase tracking-wider text-candy-hotPink font-extrabold">TikTok Video #2</span>
+                            <p class="text-candy-dark leading-snug font-bold line-clamp-2"><span class="lang-vi-text">Khám phá những mẩu chuyện nhỏ thường ngày hài hước.</span><span class="lang-en-text">Relatable TikTok comedy segment featuring fun everyday moments.</span></p>
+                        </div>
                     </div>
-                    <!-- Link 3 -->
-                    <div class="p-4 bg-white border-2 border-candy-pink/50 rounded-2xl shadow-sm flex flex-col justify-between">
-                        <div class="space-y-2">
-                            <span class="text-xs text-candy-hotPink block font-bold">TikTok Video #3</span>
-                            <p class="text-candy-dark leading-snug"><span class="lang-vi-text">Tiêu đề: Tình huống gia đình dí dỏm cực cuốn người xem.</span><span class="lang-en-text">Witty family comedy plot getting high audience feedback on TikTok.</span></p>
-                        </div>
-                        <a href="https://www.tiktok.com/@trungagga/video/7628052743185304852" target="_blank" class="mt-4 inline-flex items-center justify-center px-4 py-2 bg-candy-pink text-white rounded-xl hover:bg-candy-hotPink transition-colors gap-1.5 font-cute font-bold text-[10px]">
-                            <span>Play TikTok</span> <i class="fa-brands fa-tiktok"></i>
+                    <!-- Video 3 -->
+                    <div class="bg-white border-2 border-candy-pink/50 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-candy-pink transition-all">
+                        <a href="https://www.tiktok.com/@trungagga/video/7628052743185304852" target="_blank" class="block w-full h-32 relative group">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#121212] to-[#252525] flex items-center justify-center">
+                                <span class="text-3xl">👨‍🦳</span>
+                            </div>
+                            <div class="absolute top-2 right-2 bg-black/60 text-white text-[8px] px-2 py-0.5 rounded flex items-center gap-1">
+                                <i class="fa-brands fa-tiktok"></i> TikTok
+                            </div>
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black shadow"><i class="fa-solid fa-play ml-0.5"></i></div>
+                            </div>
                         </a>
+                        <div class="p-3 space-y-1.5">
+                            <span class="text-[9px] uppercase tracking-wider text-candy-hotPink font-extrabold">TikTok Video #3</span>
+                            <p class="text-candy-dark leading-snug font-bold line-clamp-2"><span class="lang-vi-text">Tình huống gia đình dí dỏm cực cuốn người xem.</span><span class="lang-en-text">Witty family comedy plot getting high audience feedback on TikTok.</span></p>
+                        </div>
                     </div>
-                    <!-- Link 4 -->
-                    <div class="p-4 bg-white border-2 border-candy-pink/50 rounded-2xl shadow-sm flex flex-col justify-between">
-                        <div class="space-y-2">
-                            <span class="text-xs text-candy-hotPink block font-bold">TikTok Video #4</span>
-                            <p class="text-candy-dark leading-snug"><span class="lang-vi-text">Tiêu đề: Clip ngắn vui nhộn mang đậm không khí tươi trẻ.</span><span class="lang-en-text">High-energy viral comedy clip optimized for quick interaction.</span></p>
-                        </div>
-                        <a href="https://www.tiktok.com/@trungagga/video/7643016782348913938" target="_blank" class="mt-4 inline-flex items-center justify-center px-4 py-2 bg-candy-pink text-white rounded-xl hover:bg-candy-hotPink transition-colors gap-1.5 font-cute font-bold text-[10px]">
-                            <span>Play TikTok</span> <i class="fa-brands fa-tiktok"></i>
+                    <!-- Video 4 -->
+                    <div class="bg-white border-2 border-candy-pink/50 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-candy-pink transition-all">
+                        <a href="https://www.tiktok.com/@trungagga/video/7643016782348913938" target="_blank" class="block w-full h-32 relative group">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#252525] to-[#121212] flex items-center justify-center">
+                                <span class="text-3xl">⚡</span>
+                            </div>
+                            <div class="absolute top-2 right-2 bg-black/60 text-white text-[8px] px-2 py-0.5 rounded flex items-center gap-1">
+                                <i class="fa-brands fa-tiktok"></i> TikTok
+                            </div>
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black shadow"><i class="fa-solid fa-play ml-0.5"></i></div>
+                            </div>
                         </a>
+                        <div class="p-3 space-y-1.5">
+                            <span class="text-[9px] uppercase tracking-wider text-candy-hotPink font-extrabold">TikTok Video #4</span>
+                            <p class="text-candy-dark leading-snug font-bold line-clamp-2"><span class="lang-vi-text">Clip ngắn vui nhộn mang đậm không khí tươi trẻ.</span><span class="lang-en-text">High-energy viral comedy clip optimized for quick interaction.</span></p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Tab B: Travel & Hotel Promo -->
                 <div id="folder-corporate-travel" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-sans font-semibold text-xs">
-                    <!-- Link 1 -->
-                    <div class="p-4 bg-white border-2 border-candy-blue rounded-2xl shadow-sm flex flex-col justify-between">
-                        <div class="space-y-1">
-                            <span class="text-xs text-candy-skyBlue block font-bold">Internal Engagement</span>
-                            <p class="text-candy-dark leading-snug"><span class="lang-vi-text">Video Các hoạt động nội bộ đầy màu sắc của Doanh nghiệp.</span><span class="lang-en-text">Corporate internal team engagement and colorful activities.</span></p>
-                        </div>
-                        <a href="https://www.tiktok.com/@nghiduongthientam/video/7614865647448624404" target="_blank" class="mt-4 inline-flex items-center justify-center px-4 py-2 bg-candy-skyBlue text-white rounded-xl hover:bg-candy-blue transition-colors gap-1.5 font-cute font-bold text-[10px]">
-                            <span>Watch Clip</span> <i class="fa-solid fa-hotel"></i>
+                    <!-- Video 1 -->
+                    <div class="bg-white border-2 border-candy-blue rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-candy-skyBlue transition-all">
+                        <a href="https://www.tiktok.com/@nghiduongthientam/video/7614865647448624404" target="_blank" class="block w-full h-32 relative group">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#E0F2FE] to-[#B3E5FC] flex items-center justify-center">
+                                <span class="text-3xl">🏨</span>
+                            </div>
+                            <div class="absolute top-2 right-2 bg-black/60 text-white text-[8px] px-2 py-0.5 rounded flex items-center gap-1">
+                                <i class="fa-brands fa-tiktok"></i> TikTok
+                            </div>
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black shadow"><i class="fa-solid fa-play ml-0.5"></i></div>
+                            </div>
                         </a>
+                        <div class="p-3 space-y-1">
+                            <span class="text-[9px] uppercase tracking-wider text-candy-skyBlue font-extrabold">Internal Activities</span>
+                            <p class="text-candy-dark leading-snug font-bold"><span class="lang-vi-text">Video Các hoạt động nội bộ đầy màu sắc của Doanh nghiệp.</span><span class="lang-en-text">Corporate internal team engagement and colorful activities.</span></p>
+                        </div>
                     </div>
-                    <!-- Link 2 -->
-                    <div class="p-4 bg-white border-2 border-candy-blue rounded-2xl shadow-sm flex flex-col justify-between">
-                        <div class="space-y-1">
-                            <span class="text-xs text-candy-skyBlue block font-bold">New Year Location</span>
-                            <p class="text-candy-dark leading-snug"><span class="lang-vi-text">Video Giới thiệu Địa điểm chụp hình tết siêu mộng mơ.</span><span class="lang-en-text">Aesthetic Lunar New Year photo spot walkthrough.</span></p>
-                        </div>
-                        <a href="https://www.tiktok.com/@nghiduongthientam/video/7601444136918453522" target="_blank" class="mt-4 inline-flex items-center justify-center px-4 py-2 bg-candy-skyBlue text-white rounded-xl hover:bg-candy-blue transition-colors gap-1.5 font-cute font-bold text-[10px]">
-                            <span>Watch Clip</span> <i class="fa-solid fa-hotel"></i>
+                    <!-- Video 2 -->
+                    <div class="bg-white border-2 border-candy-blue rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-candy-skyBlue transition-all">
+                        <a href="https://www.tiktok.com/@nghiduongthientam/video/7601444136918453522" target="_blank" class="block w-full h-32 relative group">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#FFF59D] to-[#E0F2FE] flex items-center justify-center">
+                                <span class="text-3xl">🌸</span>
+                            </div>
+                            <div class="absolute top-2 right-2 bg-black/60 text-white text-[8px] px-2 py-0.5 rounded flex items-center gap-1">
+                                <i class="fa-brands fa-tiktok"></i> TikTok
+                            </div>
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black shadow"><i class="fa-solid fa-play ml-0.5"></i></div>
+                            </div>
                         </a>
+                        <div class="p-3 space-y-1">
+                            <span class="text-[9px] uppercase tracking-wider text-candy-skyBlue font-extrabold">New Year Spot</span>
+                            <p class="text-candy-dark leading-snug font-bold"><span class="lang-vi-text">Video Giới thiệu Địa điểm chụp hình tết siêu mộng mơ.</span><span class="lang-en-text">Aesthetic Lunar New Year photo spot walkthrough.</span></p>
+                        </div>
                     </div>
-                    <!-- Link 3 -->
-                    <div class="p-4 bg-white border-2 border-candy-blue rounded-2xl shadow-sm flex flex-col justify-between">
-                        <div class="space-y-1">
-                            <span class="text-xs text-candy-skyBlue block font-bold">Quick Travel Promo 1</span>
-                            <p class="text-candy-dark leading-snug"><span class="lang-vi-text">Video truyền thông du lịch, check-in ẩm thực nghỉ dưỡng.</span><span class="lang-en-text">High-conversion fast-paced travel promo.</span></p>
-                        </div>
-                        <a href="https://www.tiktok.com/@nghiduongthientam/video/7609492673119931668" target="_blank" class="mt-4 inline-flex items-center justify-center px-4 py-2 bg-candy-skyBlue text-white rounded-xl hover:bg-candy-blue transition-colors gap-1.5 font-cute font-bold text-[10px]">
-                            <span>Watch Clip</span> <i class="fa-solid fa-hotel"></i>
+                    <!-- Video 3 -->
+                    <div class="bg-white border-2 border-candy-blue rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-candy-skyBlue transition-all">
+                        <a href="https://www.tiktok.com/@nghiduongthientam/video/7609492673119931668" target="_blank" class="block w-full h-32 relative group">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#B3E5FC] to-[#FFF59D] flex items-center justify-center">
+                                <span class="text-3xl">🌴</span>
+                            </div>
+                            <div class="absolute top-2 right-2 bg-black/60 text-white text-[8px] px-2 py-0.5 rounded flex items-center gap-1">
+                                <i class="fa-brands fa-tiktok"></i> TikTok
+                            </div>
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black shadow"><i class="fa-solid fa-play ml-0.5"></i></div>
+                            </div>
                         </a>
+                        <div class="p-3 space-y-1">
+                            <span class="text-[9px] uppercase tracking-wider text-candy-skyBlue font-extrabold">Quick Promo 1</span>
+                            <p class="text-candy-dark leading-snug font-bold"><span class="lang-vi-text">Video truyền thông du lịch, check-in ẩm thực nghỉ dưỡng.</span><span class="lang-en-text">High-conversion fast-paced travel promo.</span></p>
+                        </div>
                     </div>
-                    <!-- Link 4 -->
-                    <div class="p-4 bg-white border-2 border-candy-blue rounded-2xl shadow-sm flex flex-col justify-between">
-                        <div class="space-y-1">
-                            <span class="text-xs text-candy-skyBlue block font-bold">Quick Travel Promo 2</span>
-                            <p class="text-candy-dark leading-snug"><span class="lang-vi-text">Video review phòng nghỉ dưỡng dưỡng sinh thư giãn.</span><span class="lang-en-text">Wellness resort room layout and aesthetic review.</span></p>
-                        </div>
-                        <a href="https://www.tiktok.com/@nghiduongthientam/video/7544616568131636488" target="_blank" class="mt-4 inline-flex items-center justify-center px-4 py-2 bg-candy-skyBlue text-white rounded-xl hover:bg-candy-blue transition-colors gap-1.5 font-cute font-bold text-[10px]">
-                            <span>Watch Clip</span> <i class="fa-solid fa-hotel"></i>
+                    <!-- Video 4 -->
+                    <div class="bg-white border-2 border-candy-blue rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-candy-skyBlue transition-all">
+                        <a href="https://www.tiktok.com/@nghiduongthientam/video/7544616568131636488" target="_blank" class="block w-full h-32 relative group">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#FFF0F3] to-[#B3E5FC] flex items-center justify-center">
+                                <span class="text-3xl">🛏️</span>
+                            </div>
+                            <div class="absolute top-2 right-2 bg-black/60 text-white text-[8px] px-2 py-0.5 rounded flex items-center gap-1">
+                                <i class="fa-brands fa-tiktok"></i> TikTok
+                            </div>
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black shadow"><i class="fa-solid fa-play ml-0.5"></i></div>
+                            </div>
                         </a>
+                        <div class="p-3 space-y-1">
+                            <span class="text-[9px] uppercase tracking-wider text-candy-skyBlue font-extrabold">Room Layout</span>
+                            <p class="text-candy-dark leading-snug font-bold"><span class="lang-vi-text">Video review phòng nghỉ dưỡng dưỡng sinh thư giãn.</span><span class="lang-en-text">Wellness resort room layout and aesthetic review.</span></p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Tab C: NamHa1720 Clips -->
                 <div id="folder-school-projects" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-sans font-semibold text-xs">
-                    <!-- Camera man & Editor -->
-                    <div class="p-4 bg-white border-2 border-candy-pink rounded-2xl shadow-sm flex flex-col justify-between">
-                        <div class="space-y-1">
-                            <span class="text-xs text-candy-hotPink block font-bold">Cameraman & Editor</span>
-                            <p class="text-candy-dark leading-snug"><span class="lang-vi-text">Quay dựng những thước phim phóng sự học sinh xuất sắc.</span><span class="lang-en-text">Cameraman and Video editing behind school journalism.</span></p>
-                        </div>
-                        <a href="https://www.facebook.com/share/v/1DUZAXyWJu/" target="_blank" class="mt-4 inline-flex items-center justify-center px-4 py-2 bg-candy-pink text-white rounded-xl hover:bg-candy-hotPink transition-colors gap-1.5 font-cute font-bold text-[10px]">
-                            <span>Watch Clip</span> <i class="fa-solid fa-play"></i>
+                    <!-- Video 1 -->
+                    <div class="bg-white border-2 border-candy-pink rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-candy-hotPink transition-all">
+                        <a href="https://www.facebook.com/share/v/1DUZAXyWJu/" target="_blank" class="block w-full h-32 relative group">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#1877F2] to-[#B3E5FC] flex items-center justify-center">
+                                <span class="text-3xl">🎥</span>
+                            </div>
+                            <div class="absolute top-2 right-2 bg-[#1877F2] text-white text-[8px] px-2 py-0.5 rounded flex items-center gap-1 font-bold">
+                                <i class="fa-brands fa-facebook"></i> Facebook
+                            </div>
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#1877F2] shadow"><i class="fa-solid fa-play ml-0.5"></i></div>
+                            </div>
                         </a>
+                        <div class="p-3 space-y-1">
+                            <span class="text-[9px] uppercase tracking-wider text-candy-hotPink font-extrabold">Camera & Editor</span>
+                            <p class="text-candy-dark leading-snug font-bold"><span class="lang-vi-text">Quay dựng thước phim phóng sự học sinh xuất sắc.</span><span class="lang-en-text">On-scene journalism videography & editing.</span></p>
+                        </div>
                     </div>
-                    <!-- Hoạt động tại trường -->
-                    <div class="p-4 bg-white border-2 border-candy-pink rounded-2xl shadow-sm flex flex-col justify-between">
-                        <div class="space-y-1">
-                            <span class="text-xs text-candy-hotPink block font-bold">School Life Vlogs</span>
-                            <p class="text-candy-dark leading-snug"><span class="lang-vi-text">Vai trò quay chụp & dựng clip truyền tải không khí náo nhiệt.</span><span class="lang-en-text">Capturing and editing raw energy of school youth events.</span></p>
-                        </div>
-                        <a href="https://www.facebook.com/share/v/18k7rH6p4E/" target="_blank" class="mt-4 inline-flex items-center justify-center px-4 py-2 bg-candy-pink text-white rounded-xl hover:bg-candy-hotPink transition-colors gap-1.5 font-cute font-bold text-[10px]">
-                            <span>Watch Clip</span> <i class="fa-solid fa-play"></i>
+                    <!-- Video 2 -->
+                    <div class="bg-white border-2 border-candy-pink rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-candy-hotPink transition-all">
+                        <a href="https://www.facebook.com/share/v/18k7rH6p4E/" target="_blank" class="block w-full h-32 relative group">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#FFF59D] to-[#FFB7CA] flex items-center justify-center">
+                                <span class="text-3xl">🏫</span>
+                            </div>
+                            <div class="absolute top-2 right-2 bg-[#1877F2] text-white text-[8px] px-2 py-0.5 rounded flex items-center gap-1 font-bold">
+                                <i class="fa-brands fa-facebook"></i> Facebook
+                            </div>
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#1877F2] shadow"><i class="fa-solid fa-play ml-0.5"></i></div>
+                            </div>
                         </a>
+                        <div class="p-3 space-y-1">
+                            <span class="text-[9px] uppercase tracking-wider text-candy-hotPink font-extrabold">School Vlogs</span>
+                            <p class="text-candy-dark leading-snug font-bold"><span class="lang-vi-text">Ghi lại không khí học đường náo nhiệt nhất.</span><span class="lang-en-text">School lifestyle and event highlight logs.</span></p>
+                        </div>
                     </div>
-                    <!-- Phim ngắn học sinh -->
-                    <div class="p-4 bg-white border-2 border-candy-pink rounded-2xl shadow-sm flex flex-col justify-between">
-                        <div class="space-y-1">
-                            <span class="text-xs text-candy-hotPink block font-bold">Youth Short Film</span>
-                            <p class="text-candy-dark leading-snug"><span class="lang-vi-text">Sản phẩm phim ngắn - Vai trò kịch bản và setup hiện trường.</span><span class="lang-en-text">Short film coordination, script development & team setup.</span></p>
-                        </div>
-                        <a href="https://www.facebook.com/share/v/1DNmWMmM9p/" target="_blank" class="mt-4 inline-flex items-center justify-center px-4 py-2 bg-candy-pink text-white rounded-xl hover:bg-candy-hotPink transition-colors gap-1.5 font-cute font-bold text-[10px]">
-                            <span>Watch Clip</span> <i class="fa-solid fa-play"></i>
+                    <!-- Video 3 -->
+                    <div class="bg-white border-2 border-candy-pink rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-candy-hotPink transition-all">
+                        <a href="https://www.facebook.com/share/v/1DNmWMmM9p/" target="_blank" class="block w-full h-32 relative group">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#E0F2FE] to-[#FF5E7E] flex items-center justify-center">
+                                <span class="text-3xl">🎬</span>
+                            </div>
+                            <div class="absolute top-2 right-2 bg-[#1877F2] text-white text-[8px] px-2 py-0.5 rounded flex items-center gap-1 font-bold">
+                                <i class="fa-brands fa-facebook"></i> Facebook
+                            </div>
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#1877F2] shadow"><i class="fa-solid fa-play ml-0.5"></i></div>
+                            </div>
                         </a>
+                        <div class="p-3 space-y-1">
+                            <span class="text-[9px] uppercase tracking-wider text-candy-hotPink font-extrabold">Short Film</span>
+                            <p class="text-candy-dark leading-snug font-bold"><span class="lang-vi-text">Sản phẩm phim ngắn - Vai trò kịch bản & hiện trường.</span><span class="lang-en-text">Creative youth storytelling in short film setup.</span></p>
+                        </div>
                     </div>
-                    <!-- Buổi lễ cảm xúc -->
-                    <div class="p-4 bg-white border-2 border-candy-pink rounded-2xl shadow-sm flex flex-col justify-between">
-                        <div class="space-y-1">
-                            <span class="text-xs text-candy-hotPink block font-bold">Emotional Ceremony</span>
-                            <p class="text-candy-dark leading-snug"><span class="lang-vi-text">Camera man trực tiếp ghi lại các khoảnh khắc cảm xúc nghẹn ngào.</span><span class="lang-en-text">Live on-field filming during high-emotion graduation nights.</span></p>
-                        </div>
-                        <a href="https://www.facebook.com/namha1720.ent/videos/2026921200821848/" target="_blank" class="mt-4 inline-flex items-center justify-center px-4 py-2 bg-candy-pink text-white rounded-xl hover:bg-candy-hotPink transition-colors gap-1.5 font-cute font-bold text-[10px]">
-                            <span>Watch Clip</span> <i class="fa-solid fa-play"></i>
+                    <!-- Video 4 -->
+                    <div class="bg-white border-2 border-candy-pink rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-candy-hotPink transition-all">
+                        <a href="https://www.facebook.com/namha1720.ent/videos/2026921200821848/" target="_blank" class="block w-full h-32 relative group">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#FFF59D] to-[#FFF0F3] flex items-center justify-center">
+                                <span class="text-3xl">🥺</span>
+                            </div>
+                            <div class="absolute top-2 right-2 bg-[#1877F2] text-white text-[8px] px-2 py-0.5 rounded flex items-center gap-1 font-bold">
+                                <i class="fa-brands fa-facebook"></i> Facebook
+                            </div>
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#1877F2] shadow"><i class="fa-solid fa-play ml-0.5"></i></div>
+                            </div>
                         </a>
+                        <div class="p-3 space-y-1">
+                            <span class="text-[9px] uppercase tracking-wider text-candy-hotPink font-extrabold">Ceremony Night</span>
+                            <p class="text-candy-dark leading-snug font-bold"><span class="lang-vi-text">Phóng sự buổi lễ tốt nghiệp đầy cảm xúc học trò.</span><span class="lang-en-text">Emotional highlight clip from graduation ceremony.</span></p>
+                        </div>
                     </div>
                 </div>
 
@@ -873,19 +1011,19 @@
                         <img src="IMG_8251.jpg" alt="AGGA Meeting" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/350x250/E0F2FE/FFFFFF?text=Corporate+1'">
                     </div>
                     <div class="text-center space-y-1">
-                        <span class="text-[10px] font-bold text-candy-skyBlue uppercase font-cute">Document #01</span>
+                        <span class="text-[10px] font-bold text-candy-skyBlue uppercase font-cute">#01</span>
                         <h4 class="font-bold text-xs text-candy-dark truncate"><span class="lang-vi-text">Định Hướng AGGA 2026</span><span class="lang-en-text">AGGA Strategic Plan 2026</span></h4>
                     </div>
                 </div>
 
-                <!-- Doc 2: IMG_8203.jpg -->
+                <!-- Doc 2: <img src=''https://docs.google.com/uc?export=download&id=1wOf_nyhu5f9_NKPfoYhfquVz5H4nqlGJ''> -->
                 <div class="bg-white border-3 border-candy-skyBlue/50 p-4 rounded-3xl shadow-sm flex flex-col gap-3 bouncy-hover">
                     <div class="h-44 rounded-2xl overflow-hidden bg-candy-lightBlue">
                         <img src="IMG_8203.jpg" alt="Team Training" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/350x250/E0F2FE/FFFFFF?text=Corporate+2'">
                     </div>
                     <div class="text-center space-y-1">
-                        <span class="text-[10px] font-bold text-candy-skyBlue uppercase font-cute">Document #02</span>
-                        <h4 class="font-bold text-xs text-candy-dark truncate"><span class="lang-vi-text">Buổi Chuyển Giao Quy Trình</span><span class="lang-en-text">Corporate Standard Practice</span></h4>
+                        <span class="text-[10px] font-bold text-candy-skyBlue uppercase font-cute">#02</span>
+                        <h4 class="font-bold text-xs text-candy-dark truncate"><span class="lang-vi-text">Sự kiện nhỏ của doanh nghiệp</span><span class="lang-en-text">Corporate Standard Practice</span></h4>
                     </div>
                 </div>
 
@@ -895,18 +1033,18 @@
                         <img src="IMG_8116.jpg" alt="Meeting Hall" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/350x250/E0F2FE/FFFFFF?text=Corporate+3'">
                     </div>
                     <div class="text-center space-y-1">
-                        <span class="text-[10px] font-bold text-candy-skyBlue uppercase font-cute">Document #03</span>
+                        <span class="text-[10px] font-bold text-candy-skyBlue uppercase font-cute">#03</span>
                         <h4 class="font-bold text-xs text-candy-dark truncate"><span class="lang-vi-text">Buổi Họp Cổ Đông Trụ Sở</span><span class="lang-en-text">Headquarters Shareholders Assembly</span></h4>
                     </div>
                 </div>
 
-                <!-- Doc 4: ChatGPT Image 07_32_35 9 thg 6, 2026.png -->
+                <!-- Doc 4: <img src=''https://docs.google.com/uc?export=download&id=1kJa1nzR9Hb6P9HGVU2WRkRZVN9CG_bS7''>-->
                 <div class="bg-white border-3 border-candy-skyBlue/50 p-4 rounded-3xl shadow-sm flex flex-col gap-3 bouncy-hover">
                     <div class="h-44 rounded-2xl overflow-hidden bg-candy-lightBlue">
                         <img src="ChatGPT Image 07_32_35 9 thg 6, 2026.png" alt="Group Villa Ceremony" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/350x250/E0F2FE/FFFFFF?text=Corporate+4'">
                     </div>
                     <div class="text-center space-y-1">
-                        <span class="text-[10px] font-bold text-candy-skyBlue uppercase font-cute">Document #04</span>
+                        <span class="text-[10px] font-bold text-candy-skyBlue uppercase font-cute">#04</span>
                         <h4 class="font-bold text-xs text-candy-dark truncate"><span class="lang-vi-text">Lễ Trao Tặng Biệt Thự Trị Giá 5 Tỷ</span><span class="lang-en-text">Villa Donation Ceremony (5B VND)</span></h4>
                     </div>
                 </div>
@@ -919,7 +1057,7 @@
             <div class="text-center space-y-2">
                 <span class="text-candy-hotPink font-cute font-bold text-sm tracking-widest block">🧘 MINDFUL / 禅 ☁️</span>
                 <h2 class="text-3xl sm:text-4xl font-cute font-bold text-candy-dark">
-                    <span class="lang-vi-text">Trạm Dừng Chân Bình Yên Của Thư Thư 🌸</span>
+                    <span class="lang-vi-text">Trạm Dừng Chân Bình Yên Của Anh Thư 🌸</span>
                     <span class="lang-en-text">Anh Thư's Zen Safe Haven 🌸</span>
                 </h2>
                 <div class="p-4 bg-white/70 backdrop-blur-sm rounded-2xl max-w-2xl mx-auto border border-candy-pink/35 text-xs sm:text-sm text-candy-dark/95 leading-relaxed font-sans font-semibold">
@@ -1161,7 +1299,7 @@
                         </div>
                         
                         <button type="submit" class="w-full py-3.5 rounded-xl bg-candy-hotPink hover:bg-candy-pink text-white font-cute font-bold text-sm shadow-[0_5px_0_#C23B55] hover:translate-y-0.5 hover:shadow-[0_1px_0_#C23B55] transition-all">
-                            <span class="lang-vi-text">Tin Nhắn Ngay 🚀</span>
+                            <span class="lang-vi-text">Bắn Tin Nhắn Ngay 🚀</span>
                             <span class="lang-en-text">Send Message Now 🚀</span>
                         </button>
                     </form>
@@ -1384,7 +1522,7 @@
             document.execCommand('copy');
             document.body.removeChild(shadowInput);
             
-            triggerToast(currentLang === 'vi' ? 'Đã sao chép địa chỉ Email của Thư Thư! 🎀' : 'Copied email address successfully! 🎀');
+            triggerToast(currentLang === 'vi' ? 'Đã sao chép địa chỉ Email của mình! 🎀' : 'Copied email address successfully! 🎀');
         }
 
         function copyPhone() {
@@ -1396,12 +1534,12 @@
             document.execCommand('copy');
             document.body.removeChild(shadowInput);
             
-            triggerToast(currentLang === 'vi' ? 'Đã sao chép Số điện thoại Zalo của Thư Thư! 📞' : 'Copied phone number successfully! 📞');
+            triggerToast(currentLang === 'vi' ? 'Đã sao chép Số điện thoại Zalo của mình! 📞' : 'Copied phone number successfully! 📞');
         }
 
         function handleContactSubmit(event) {
             event.preventDefault();
-            triggerToast(currentLang === 'vi' ? 'Tin nhắn đã  gửi thành công! Mình sẽ phản hồi bạn sớm nha! 🌸' : 'Message simulated successfully! I will reach out soon! 🌸');
+            triggerToast(currentLang === 'vi' ? 'Tin nhắn đã giả lập gửi thành công! Mình sẽ phản hồi bạn sớm nha! 🌸' : 'Message simulated successfully! I will reach out soon! 🌸');
             event.target.reset();
         }
     </script>
