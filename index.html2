@@ -1,1 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mai Anh Thư (鱼鱼) - Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/browser@4">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style type="text/css">
+        @theme {
+            --color-candy-pink: #FFB7CA;
+            --color-candy-hotPink: #FF5E7E;
+            --color-candy-lightPink: #FFF0F3;
+            --color-candy-blue: #B3E5FC;
+            --color-candy-skyBlue: #38BDF8;
+            --color-candy-lightBlue: #E0F2FE;
+            --color-candy-yellow: #FFF59D;
+            --color-candy-lightYellow: #FFFDE7;
+            --color-candy-purple: #E1BEE7;
+            --color-candy-textDark: #4A3E4D;
+            --color-candy-textMuted: #8A7A8F;
+            
+            --font-cute: "Comfortaa", cursive;
+            --font-sans: "Quicksand", sans-serif;
+            
+            --animate-float: float 4s ease-in-out infinite;
+            --animate-sparkle: sparkle 2s ease-in-out infinite;
+        }
 
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+
+        body {
+            font-family: "Quicksand", sans-serif;
+            background-color: #FFF0F3;
+            color: #4A3E4D;
+        }
+        .font-cute {
+            font-family: "Comfortaa", cursive;
+        }
+    </style>
+</head>
+<body class="bg-candy-lightPink text-candy-textDark font-sans selection:bg-candy-pink selection:text-white overflow-x-hidden min-h-screen flex flex-col">
+
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute top-10 left-10 text-candy-pink/30 animate-float text-xl"><i class="fa-solid fa-star"></i></div>
+        <div class="absolute top-40 right-20 text-candy-blue/40 animate-float [animation-delay:1s] text-2xl"><i class="fa-solid fa-cloud"></i></div>
+        <div class="absolute bottom-20 left-16 text-candy-yellow/40 animate-float [animation-delay:2s] text-lg"><i class="fa-solid fa-heart"></i></div>
+        <div class="absolute bottom-40 right-12 text-candy-purple/30 animate-float [animation-delay:1.5s] text-xl"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+    </div>
+
+    <div id="toastNotification" class="fixed top-5 left-1/2 -translate-x-1/2 z-50 bg-white/90 backdrop-blur-md border border-candy-pink px-6 py-3 rounded-full shadow-lg text-sm font-bold tracking-wide text-candy-hotPink hidden flex items-center gap-2 transition-all duration-300 transform scale-95 opacity-0">
+        <i class="fa-solid fa-wand-magic-sparkles animate-spin text-candy-pink"></i>
+        <span id="toastMessage">Thông báo nè! 🎀</span>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-white/70 backdrop-blur-md border-b border-candy-pink/20 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="#" class="font-cute font-bold text-xl text-candy-hotPink tracking-wider flex items-center gap-2 drop-shadow-sm hover:scale-105 transition-transform">
+                <span class="bg-candy-pink text-white w-8 h-8 rounded-full flex items-center justify-center text-sm shadow-sm">鱼</span>
+                <span>AnhThư.</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 font-cute font-semibold text-sm">
+                <a href="#about" class="text-candy-textDark hover:text-candy-hotPink transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-candy-hotPink after:transition-all hover:after:w-full" data-vi="Giới Thiệu" data-en="About">Giới Thiệu</a>
+                <a href="#skills" class="text-candy-textDark hover:text-candy-hotPink transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-candy-hotPink after:transition-all hover:after:w-full" data-vi="Kỹ Năng" data-en="Skills">Kỹ Năng</a>
+                <a href="#projects" class="text-candy-textDark hover:text-candy-hotPink transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-candy-hotPink after:transition-all hover:after:w-full" data-vi="Dự Án" data-en="Projects">Dự Án</a>
+                <a href="#contact" class="text-candy-textDark hover:text-candy-hotPink transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-candy-hotPink after:transition-all hover:after:w-full" data-vi="Liên Hệ" data-en="Contact">Liên Hệ</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <button onclick="toggleLanguage()" class="bg-candy-lightBlue hover:bg-candy-blue/50 text-candy-skyBlue font-cute text-xs font-bold px-3 py-1.5 rounded-full border border-candy-skyBlue/30 shadow-sm transition-all flex items-center gap-1 cursor-pointer">
+                    <i class="fa-solid fa-earth-asia"></i>
+                    <span id="langLabel">EN</span>
+                </button>
+                
+                <button onclick="toggleMobileMenu()" class="md:hidden text-candy-textDark hover:text-candy-hotPink focus:outline-none text-xl p-1 cursor-pointer" aria-label="Toggle Menu">
+                    <i id="menuIcon" class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-candy-pink/30 px-6 py-4 absolute inset-x-0 top-16 shadow-inner flex flex-col gap-4 font-cute font-semibold text-sm transition-all duration-300">
+            <a href="#about" onclick="toggleMobileMenu()" class="text-candy-textDark hover:text-candy-hotPink py-1 transition-colors" data-vi="Giới Thiệu" data-en="About">Giới Thiệu</a>
+            <a href="#skills" onclick="toggleMobileMenu()" class="text-candy-textDark hover:text-candy-hotPink py-1 transition-colors" data-vi="Kỹ Năng" data-en="Skills">Kỹ Năng</a>
+            <a href="#projects" onclick="toggleMobileMenu()" class="text-candy-textDark hover:text-candy-hotPink py-1 transition-colors" data-vi="Dự Án" data-en="Projects">Dự Án</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="text-candy-textDark hover:text-candy-hotPink py-1 transition-colors" data-vi="Liên Hệ" data-en="Contact">Liên Hệ</a>
+        </div>
+    </header>
+
+    <main class="flex-grow z-10">
+        
+        <section id="about" class="max-w-5xl mx-auto px-4 pt-10 pb-16 md:py-24 flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            <div class="w-full md:w-3/5 text-center md:text-left flex flex-col items-center md:items-start">
+                <span class="inline-flex items-center gap-1.5 bg-candy-yellow text-amber-800 text-xs font-bold font-cute px-3 py-1 rounded-full border border-amber-300/30 shadow-sm mb-4 animate-bounce">
+                    <i class="fa-solid fa-sparkles text-amber-500"></i>
+                    <span data-vi="Chào cậu nha! Mình là" data-en="Hi there! I am">Chào cậu nha! Mình là</span>
+                </span>
+                
+                <h1 class="font-cute font-bold text-4xl sm:text-5xl lg:text-6xl text-candy-hotPink tracking-wide mb-3 drop-shadow-sm">
+                    Mai Anh Thư
+                </h1>
+                
+                <div class="h-8 mb-6 overflow-hidden flex items-center justify-center md:justify-start">
+                    <p id="tagline" class="font-cute font-bold text-base md:text-lg text-candy-skyBlue tracking-wider transition-all duration-500 transform translate-y-0 opacity-100" data-vi="✨ Một Cự Giải thích sự dễ thương ✨" data-en="✨ A cute-loving Cancerian ✨">
+                        ✨ Một Cự Giải thích sự dễ thương ✨
+                    </p>
+                </div>
+
+                <p class="text-candy-textMuted text-sm md:text-base leading-relaxed max-w-xl mb-8 font-medium" data-vi="Chào mừng bạn đến với thế giới nhỏ của Thư! Mình là một cô gái mộng mơ sinh năm 2004, yêu cái đẹp, thích sự sáng tạo và luôn tràn đầy năng lượng tích cực. Thư đam mê việc mang những nét vẽ kẹo ngọt, xinh xắn vào cuộc sống và công việc hàng ngày!" data-en="Welcome to Thu's little dreamworld! Born in 2004, I'm a passionate and creative Cancerian who loves aesthetic designs, sweets, and radiating positive vibes. I aim to sprinkle pastel sweetness and cute dynamics into everyday projects!">
+                    Chào mừng bạn đến với thế giới nhỏ của Thư! Mình là một cô gái mộng mơ sinh năm 2004, yêu cái đẹp, thích sự sáng tạo và luôn tràn đầy năng lượng tích cực. Thư đam mê việc mang những nét vẽ kẹo ngọt, xinh xắn vào cuộc sống và công việc hàng ngày!
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                    <a href="#contact" class="inline-flex items-center gap-2 bg-candy-hotPink hover:bg-candy-hotPink/90 text-white font-cute font-bold text-sm px-6 py-3 rounded-full shadow-md shadow-candy-hotPink/20 transition-all hover:-translate-y-0.5 active:translate-y-0 cursor-pointer">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span data-vi="Trò Chuyện Nha" data-en="Let's Chat">Trò Chuyện Nha</span>
+                    </a>
+                    <a href="#projects" class="inline-flex items-center gap-2 bg-white hover:bg-candy-lightYellow text-candy-hotPink font-cute font-bold text-sm px-6 py-3 rounded-full shadow-sm border border-candy-pink/50 transition-all hover:-translate-y-0.5 active:translate-y-0 cursor-pointer">
+                        <i class="fa-solid fa-heart"></i>
+                        <span data-vi="Xem Sản Phẩm" data-en="View Works">Xem Sản Phẩm</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full md:w-2/5 flex justify-center">
+                <div class="relative max-w-[280px] sm:max-w-[320px] w-full aspect-[28/34] p-3 bg-white rounded-3xl shadow-xl shadow-candy-pink/10 border border-candy-pink/20 transform rotate-2 hover:rotate-0 transition-transform duration-500 group">
+                    <div class="w-full h-full rounded-2xl bg-gradient-to-tr from-candy-lightBlue to-candy-lightPink overflow-hidden relative border-2 border-dashed border-candy-pink/50">
+                        <img src="avatar1.png" alt="Mai Anh Thư" width="300" height="360" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                        
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent p-4 text-white text-center">
+                            <span class="font-cute font-bold tracking-wider text-sm block">MAI ANH THƯ</span>
+                            <span class="text-xs text-candy-pink font-bold">@caconitu</span>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute -top-3 -right-3 w-10 h-10 bg-candy-pink text-white rounded-full flex items-center justify-center shadow-md animate-bounce [animation-duration:3s]"><i class="fa-solid fa-ribbon text-sm"></i></div>
+                    <div class="absolute -bottom-3 -left-3 w-8 h-8 bg-candy-yellow text-amber-700 rounded-full flex items-center justify-center shadow-md animate-float"><i class="fa-solid fa-fish text-xs"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="flex items-center justify-center gap-3 text-candy-pink/40 text-xs py-4">
+            <i class="fa-solid fa-circle text-[6px]"></i>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-circle text-[6px]"></i>
+        </div>
+
+        <section id="skills" class="max-w-5xl mx-auto px-4 py-16">
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <h2 class="font-cute font-bold text-2xl md:text-3xl text-candy-hotPink mb-3" data-vi="Thư Có Thể Làm Gì? 🍦" data-en="What Thu Can Do? 🍦">Thư Có Thể Làm Gì? 🍦</h2>
+                <p class="text-candy-textMuted text-xs md:text-sm font-medium" data-vi="Những kỹ năng nhỏ nhắn xinh xắn mà Thư đã học hỏi, tích lũy để biến mọi ý tưởng trở nên ngọt ngào nhất!" data-en="A sweet box of skills and toolsets I gathered to turn messy ideas into visual masterpieces.">Những kỹ năng nhỏ nhắn xinh xắn mà Thư đã học hỏi, tích lũy để biến mọi ý tưởng trở nên ngọt ngào nhất!</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/80 backdrop-blur-sm border border-candy-pink/20 p-6 rounded-2xl shadow-sm text-center flex flex-col items-center hover:shadow-md hover:-translate-y-1 transition-all">
+                    <div class="w-12 h-12 bg-candy-lightPink text-candy-hotPink rounded-full flex items-center justify-center text-xl mb-4 shadow-inner"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3 class="font-cute font-bold text-sm text-candy-textDark mb-2" data-vi="Sáng Tạo Nội Dung" data-en="Content Creation">Sáng Tạo Nội Dung</h3>
+                    <p class="text-candy-textMuted text-xs leading-relaxed font-medium" data-vi="Viết lách dễ thương, bắt trend nhanh nhạy và lên ý tưởng kịch bản video dí dỏm." data-en="Crafting sweet words, catching tiny viral trends, and plotting playful video scripts.">Viết lách dễ thương, bắt trend nhanh nhạy và lên ý tưởng kịch bản video dí dỏm.</p>
+                </div>
+
+                <div class="bg-white/80 backdrop-blur-sm border border-candy-pink/20 p-6 rounded-2xl shadow-sm text-center flex flex-col items-center hover:shadow-md hover:-translate-y-1 transition-all">
+                    <div class="w-12 h-12 bg-candy-lightBlue text-candy-skyBlue rounded-full flex items-center justify-center text-xl mb-4 shadow-inner"><i class="fa-solid fa-palette"></i></div>
+                    <h3 class="font-cute font-bold text-sm text-candy-textDark mb-2" data-vi="Thẩm Mỹ Pastel" data-en="Pastel Aesthetics">Thẩm Mỹ Pastel</h3>
+                    <p class="text-candy-textMuted text-xs leading-relaxed font-medium" data-vi="Phối màu kẹo ngọt, thiết kế slide Canva, làm layout trang trí trang cá nhân nghệ thuật." data-en="Curating soft color schemes, designing Canva slide decks, and building visual boards.">Phối màu kẹo ngọt, thiết kế slide Canva, làm layout trang trí trang cá nhân nghệ thuật.</p>
+                </div>
+
+                <div class="bg-white/80 backdrop-blur-sm border border-candy-pink/20 p-6 rounded-2xl shadow-sm text-center flex flex-col items-center hover:shadow-md hover:-translate-y-1 transition-all">
+                    <div class="w-12 h-12 bg-candy-lightYellow text-amber-500 rounded-full flex items-center justify-center text-xl mb-4 shadow-inner"><i class="fa-solid fa-camera-retro"></i></div>
+                    <h3 class="font-cute font-bold text-sm text-candy-textDark mb-2" data-vi="Chụp & Chỉnh Ảnh" data-en="Photography & Edit">Chụp & Chỉnh Ảnh</h3>
+                    <p class="text-candy-textMuted text-xs leading-relaxed font-medium" data-vi="Bắt trọn khoảnh khắc nhẹ nhàng, rực rỡ và chỉnh sửa màu ảnh trong trẻo, đáng yêu." data-en="Capturing bright memories and grading tones to look extremely bubbly and lively.">Bắt trọn khoảnh khắc nhẹ nhàng, rực rỡ và chỉnh sửa màu ảnh trong trẻo, đáng yêu.</p>
+                </div>
+
+                <div class="bg-white/80 backdrop-blur-sm border border-candy-pink/20 p-6 rounded-2xl shadow-sm text-center flex flex-col items-center hover:shadow-md hover:-translate-y-1 transition-all">
+                    <div class="w-12 h-12 bg-candy-purple/30 text-purple-600 rounded-full flex items-center justify-center text-xl mb-4 shadow-inner"><i class="fa-solid fa-face-smile-wink"></i></div>
+                    <h3 class="font-cute font-bold text-sm text-candy-textDark mb-2" data-vi="Giao Tiếp Thân Thiện" data-en="Friendly Relations">Giao Tiếp Thân Thiện</h3>
+                    <p class="text-candy-textMuted text-xs leading-relaxed font-medium" data-vi="Lắng nghe chân thành, hòa đồng, mang lại cảm giác dễ chịu và tích cực cho mọi người." data-en="Empathetic listening, warm vibes, and creating a comfortable atmosphere for team tasks.">Lắng nghe chân thành, hòa đồng, mang lại cảm giác dễ chịu và tích cực cho mọi người.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="flex items-center justify-center gap-3 text-candy-pink/40 text-xs py-4">
+            <i class="fa-solid fa-circle text-[6px]"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-circle text-[6px]"></i>
+        </div>
+
+        <section id="projects" class="max-w-5xl mx-auto px-4 py-16">
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <h2 class="font-cute font-bold text-2xl md:text-3xl text-candy-hotPink mb-3" data-vi="Nhật Ký Dự Án 🌸" data-en="Project Diary 🌸">Nhật Ký Dự Án 🌸</h2>
+                <p class="text-candy-textMuted text-xs md:text-sm font-medium" data-vi="Nơi lưu giữ những kỷ niệm, sản phẩm tâm huyết mà Thư đã cùng đồng đội tạo ra!" data-en="A small scrapbook displaying recent collaborations and cute works.">Nơi lưu giữ những kỷ niệm, sản phẩm tâm huyết mà Thư đã cùng đồng đội tạo ra!</p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl shadow-candy-pink/5 border border-candy-pink/20 overflow-hidden max-w-4xl mx-auto flex flex-col md:flex-row items-stretch">
+                <div class="w-full md:w-1/2 relative bg-candy-lightBlue flex flex-col items-center justify-center min-h-[260px] md:min-h-[380px] overflow-hidden group">
+                    <div id="carouselTrack" class="w-full h-full flex transition-transform duration-500 transform translate-x-0">
+                        <div class="w-full h-full flex-shrink-0 relative">
+                            <img src="6e10e460-a292-4217-a006-258169fb6539.jpg" width="450" height="380" alt="Dự án NamHa" class="w-full h-full object-cover object-center absolute inset-0">
+                        </div>
+                        <div class="w-full h-full flex-shrink-0 relative">
+                            <img src="6e10e460-a292-4217-a006-258169fb6539.jpg" width="450" height="380" alt="Dự án NamHa Detail" class="w-full h-full object-cover object-center absolute inset-0 brightness-95">
+                        </div>
+                    </div>
+                    
+                    <button onclick="prevSlide()" class="absolute left-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-candy-hotPink border border-candy-pink/30 flex items-center justify-center text-xs shadow-sm cursor-pointer z-20">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button onclick="nextSlide()" class="absolute right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-candy-hotPink border border-candy-pink/30 flex items-center justify-center text-xs shadow-sm cursor-pointer z-20">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    
+                    <div class="absolute bottom-3 flex items-center gap-1.5 z-20">
+                        <span class="carousel-dot w-2 h-2 rounded-full bg-candy-hotPink transition-all duration-300"></span>
+                        <span class="carousel-dot w-2 h-2 rounded-full bg-white/60 transition-all duration-300"></span>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-[10px] uppercase font-bold tracking-widest font-cute bg-candy-pink/30 text-candy-hotPink px-2.5 py-0.5 rounded-full border border-candy-pink/20">Group Work</span>
+                            <span class="text-[10px] uppercase font-bold tracking-widest font-cute bg-candy-lightYellow text-amber-800 px-2.5 py-0.5 rounded-full border border-amber-200">Event</span>
+                        </div>
+                        <h3 class="font-cute font-bold text-xl text-candy-textDark mb-3">NamHa 1720</h3>
+                        <p class="text-candy-textMuted text-xs sm:text-sm leading-relaxed mb-6 font-medium" data-vi="Dự án kỷ niệm đầy tự hào mà Thư cùng các thành viên đã dồn hết tâm huyết thực hiện. Trong dự án này, Thư chịu trách nhiệm chính về phần lên nội dung, hỗ trợ sắp xếp layout hình ảnh, mang tone màu tươi sáng và lưu giữ trọn vẹn những khoảnh khắc thanh xuân rực rỡ của tập thể." data-en="A collective memory project close to my heart. Working closely with my sweet teammates, I anchored the content ideation, script layout and pastel color aesthetics, helping to immortalize pure vibrant youth memories beautifully.">
+                            Dự án kỷ niệm đầy tự hào mà Thư cùng các thành viên đã dồn hết tâm huyết thực hiện. Trong dự án này, Thư chịu trách nhiệm chính về phần lên nội dung, hỗ trợ sắp xếp layout hình ảnh, mang tone màu tươi sáng và lưu giữ trọn vẹn những khoảnh khắc thanh xuân rực rỡ của tập thể.
+                        </p>
+                    </div>
+
+                    <div class="border-t border-candy-pink/10 pt-4 flex items-center justify-between">
+                        <div class="flex items-center gap-2 text-xs text-candy-textMuted font-semibold">
+                            <i class="fa-regular fa-calendar-heart text-candy-pink"></i>
+                            <span>2023 - 2024</span>
+                        </div>
+                        <button onclick="triggerToast(currentLang === 'vi' ? 'Dự án đang được cập nhật thêm tài liệu nha! 📑' : 'Document archive is expanding! 📑')" class="text-xs font-cute font-bold text-candy-skyBlue hover:text-candy-hotPink transition-colors flex items-center gap-1 cursor-pointer">
+                            <span data-vi="Xem Chi Tiết" data-en="See Details">Xem Chi Tiết</span>
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="flex items-center justify-center gap-3 text-candy-pink/40 text-xs py-4">
+            <i class="fa-solid fa-circle text-[6px]"></i>
+            <i class="fa-solid fa-paperclip"></i>
+            <i class="fa-solid fa-circle text-[6px]"></i>
+        </div>
+
+        <section id="contact" class="max-w-4xl mx-auto px-4 py-16">
+            <div class="bg-gradient-to-br from-white to-candy-lightYellow/40 rounded-3xl shadow-xl shadow-candy-pink/5 border border-candy-pink/20 p-6 sm:p-10 flex flex-col md:flex-row gap-10 items-stretch">
+                <div class="w-full md:w-5/12 flex flex-col justify-between">
+                    <div>
+                        <h2 class="font-cute font-bold text-2xl text-candy-hotPink mb-3" data-vi="Gửi Thư Kẹo Ngọt! ✉️" data-en="Send Thu a Letter! ✉️">Gửi Thư Kẹo Ngọt! ✉️</h2>
+                        <p class="text-candy-textMuted text-xs sm:text-sm leading-relaxed mb-6 font-medium" data-vi="Cậu muốn hợp tác làm việc, trao đổi ý tưởng dễ thương hay đơn giản là kết bạn trò chuyện? Đừng ngại ngần gửi tin nhắn cho Thư nhé, mình sẽ rep liền nha!" data-en="Want to design something pastel, pitch an idea, or just share candy cravings? Drop a mailbox note, and I will happily bounce back with cheerful energy!">
+                            Cậu muốn hợp tác làm việc, trao đổi ý tưởng dễ thương hay đơn giản là kết bạn trò chuyện? Đừng ngại ngần gửi tin nhắn cho Thư nhé, mình sẽ rep liền nha!
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col gap-3 font-medium text-xs sm:text-sm text-candy-textDark">
+                        <div onclick="copyMail('2004anthumai@gmail.com')" class="flex items-center gap-3 bg-white p-3 rounded-xl border border-candy-pink/20 shadow-sm cursor-pointer hover:border-candy-pink hover:bg-candy-lightPink/30 transition-all group">
+                            <div class="w-8 h-8 rounded-lg bg-candy-lightPink text-candy-hotPink flex items-center justify-center text-sm group-hover:scale-110 transition-transform shadow-inner"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="overflow-hidden">
+                                <span class="block font-cute font-bold text-[10px] text-candy-textMuted uppercase tracking-wider">Email Mẹo</span>
+                                <span class="block truncate font-semibold">2004anthumai@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <div onclick="copyPhone()" class="flex items-center gap-3 bg-white p-3 rounded-xl border border-candy-pink/20 shadow-sm cursor-pointer hover:border-candy-pink hover:bg-candy-lightPink/30 transition-all group">
+                            <div class="w-8 h-8 rounded-lg bg-candy-lightBlue text-candy-skyBlue flex items-center justify-center text-sm group-hover:scale-110 transition-transform shadow-inner"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <span class="block font-cute font-bold text-[10px] text-candy-textMuted uppercase tracking-wider">Zalo / Phone</span>
+                                <span class="block font-semibold">0379 966 033</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-7/12 bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-candy-pink/20 shadow-inner">
+                    <form onsubmit="handleContactSubmit(event)" class="space-y-4 font-medium text-xs sm:text-sm">
+                        <div>
+                            <label class="block font-cute font-bold text-candy-textDark mb-1.5" data-vi="Tên của cậu 💫" data-en="Your sweet name 💫">Tên của cậu 💫</label>
+                            <input type="text" required placeholder="Candy Guest" class="w-full px-4 py-2.5 rounded-xl bg-white border border-candy-pink/30 focus:outline-none focus:border-candy-hotPink focus:ring-2 focus:ring-candy-pink/20 text-candy-textDark placeholder-candy-textMuted/40 font-semibold transition-all shadow-sm">
+                        </div>
+                        <div>
+                            <label class="block font-cute font-bold text-candy-textDark mb-1.5" data-vi="Địa chỉ Email 🌸" data-en="Your email 🌸">Địa chỉ Email 🌸</label>
+                            <input type="email" required placeholder="example@candy.com" class="w-full px-4 py-2.5 rounded-xl bg-white border border-candy-pink/30 focus:outline-none focus:border-candy-hotPink focus:ring-2 focus:ring-candy-pink/20 text-candy-textDark placeholder-candy-textMuted/40 font-semibold transition-all shadow-sm">
+                        </div>
+                        <div>
+                            <label class="block font-cute font-bold text-candy-textDark mb-1.5" data-vi="Lời nhắn ngọt ngào 💬" data-en="Sweet notes for Thu 💬">Lời nhắn ngọt ngào 💬</label>
+                            <textarea rows="4" required placeholder="Hi Thu..." class="w-full px-4 py-2.5 rounded-xl bg-white border border-candy-pink/30 focus:outline-none focus:border-candy-hotPink focus:ring-2 focus:ring-candy-pink/20 text-candy-textDark placeholder-candy-textMuted/40 font-semibold transition-all shadow-sm resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-candy-hotPink to-candy-pink hover:from-candy-hotPink/90 hover:to-candy-pink/90 text-white font-cute font-bold p-3 rounded-xl shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 cursor-pointer text-sm">
+                            <i class="fa-solid fa-paper-plane-top"></i>
+                            <span data-vi="Gửi Ngay Cho Thư ✨" data-en="Send To Thu ✨">Gửi Ngay Cho Thư ✨</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-candy-pink/20 py-8 text-center relative z-10 mt-auto">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col items-center gap-4">
+            <div class="flex items-center gap-4 text-base">
+                <a href="https://facebook.com" target="_blank" class="w-8 h-8 rounded-full bg-candy-lightPink text-candy-hotPink hover:bg-candy-hotPink hover:text-white border border-candy-pink/10 shadow-sm flex items-center justify-center transition-all hover:-translate-y-1" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded-full bg-candy-lightPink text-candy-hotPink hover:bg-candy-hotPink hover:text-white border border-candy-pink/10 shadow-sm flex items-center justify-center transition-all hover:-translate-y-1" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://tiktok.com" target="_blank" class="w-8 h-8 rounded-full bg-candy-lightPink text-candy-hotPink hover:bg-candy-hotPink hover:text-white border border-candy-pink/10 shadow-sm flex items-center justify-center transition-all hover:-translate-y-1" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            
+            <p class="font-cute font-bold text-xs text-candy-textMuted tracking-wide" data-vi="© 2024 Mai Anh Thư. Được làm với cả sự đáng yêu 🎀" data-en="© 2024 Mai Anh Thư. Made with extreme cuteness 🎀">
+                © 2024 Mai Anh Thư. Được làm với cả sự đáng yêu 🎀
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Core states
+        let currentLang = 'vi';
+        let currentSlide = 0;
+        const totalSlides = 2;
+        
+        // Tagline array animation states
+        const viTaglines = ["✨ Một Cự Giải thích sự dễ thương ✨", "🎀 Đam mê màu sắc Pastel & Kẹo ngọt 🎀", "🌸 Lan tỏa những năng lượng tích cực 🌸"];
+        const enTaglines = ["✨ A cute-loving Cancerian ✨", "🎀 Pastel Colors & Sweet Tooth Addict 🎀", "🌸 Spreading cheerful happy positive vibes 🌸"];
+        let taglineIndex = 0;
+
+        // Auto carousel slide loop trigger timer interval or change indicators
+        setInterval(() => {
+            taglineIndex = (taglineIndex + 1) % viTaglines.length;
+            const taglineEl = document.getElementById('tagline');
+            if (taglineEl) {
+                taglineEl.style.transform = 'translateY(-15px)';
+                taglineEl.style.opacity = '0';
+                
+                setTimeout(() => {
+                    taglineEl.innerText = currentLang === 'vi' ? viTaglines[taglineIndex] : enTaglines[taglineIndex];
+                    taglineEl.style.transform = 'translateY(15px)';
+                    setTimeout(() => {
+                        taglineEl.style.transform = 'translateY(0)';
+                        taglineEl.style.opacity = '1';
+                    }, 50);
+                }, 400);
+            }
+        }, 4000);
+
+        // Language Translator logic switches
+        function toggleLanguage() {
+            currentLang = currentLang === 'vi' ? 'en' : 'vi';
+            document.getElementById('langLabel').innerText = currentLang === 'vi' ? 'EN' : 'VI';
+            
+            // Translate tags having data attribute labels
+            const translatableElements = document.querySelectorAll('[data-vi]');
+            translatableElements.forEach(el => {
+                el.innerText = el.getAttribute(`data-${currentLang}`);
+            });
+            
+            // Re-sync correct single immediate text lines
+            document.getElementById('tagline').innerText = currentLang === 'vi' ? viTaglines[taglineIndex] : enTaglines[taglineIndex];
+            
+            triggerToast(currentLang === 'vi' ? 'Đã chuyển đổi sang Tiếng Việt! 🇻🇳' : 'Switched language to English! 🇬🇧');
+        }
+
+        // Mobile responsive bar slide layout triggers
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.className = 'fa-solid fa-xmark text-candy-hotPink';
+            } else {
+                menu.classList.add('hidden');
+                icon.className = 'fa-solid fa-bars-staggered';
+            }
+        }
+
+        // Project carousel sliders methods
+        function updateCarouselDisplay() {
+            const track = document.getElementById('carouselTrack');
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Sync dot indicator colors active states bubbles
+            const dots = document.querySelectorAll('.carousel-dot');
+            dots.forEach((dot, idx) => {
+                if (idx === currentSlide) {
+                    dot.className = 'carousel-dot w-4 h-2 rounded-full bg-candy-hotPink transition-all duration-300';
+                } else {
+                    dot.className = 'carousel-dot w-2 h-2 rounded-full bg-candy-textMuted/30 transition-all duration-300';
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarouselDisplay();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarouselDisplay();
+        }
+
+        // Shared Sweet Pop alert triggers
+        function triggerToast(message) {
+            const toast = document.getElementById('toastNotification');
+            const msgSpan = document.getElementById('toastMessage');
+            
+            msgSpan.innerText = message;
+            toast.classList.remove('hidden');
+            
+            // Trigger animation active states delays CSS
+            setTimeout(() => {
+                toast.style.opacity = '1';
+                toast.style.transform = 'translateY(10px) translateX(-50%) scale(1)';
+            }, 10);
+            
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(0px) translateX(-50%) scale(0.9)';
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 300);
+            }, 3000);
+        }
+
+        function copyMail(address) {
+            const shadowInput = document.createElement('input');
+            shadowInput.value = address;
+            document.body.appendChild(shadowInput);
+            shadowInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(shadowInput);
+            
+            triggerToast(currentLang === 'vi' ? 'Đã sao chép địa chỉ Email của Thư! 🎀' : 'Copied email address successfully! 🎀');
+        }
+
+        function copyPhone() {
+            const phone = '0379966033';
+            const shadowInput = document.createElement('input');
+            shadowInput.value = phone;
+            document.body.appendChild(shadowInput);
+            shadowInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(shadowInput);
+            
+            triggerToast(currentLang === 'vi' ? 'Đã sao chép Số điện thoại Zalo của Thư! 📞' : 'Copied phone number successfully! 📞');
+        }
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            triggerToast(currentLang === 'vi' ? 'Tin nhắn đã gửi thành công! Mình sẽ phản hồi bạn sớm nha! 🌸' : 'Message simulated successfully! I will reach out soon! 🌸');
+            event.target.reset();
+        }
+        
+        // Initial call dot tracking state syncing layout loads
+        updateCarouselDisplay();
+    </script>
+</body>
+</html>
