@@ -1045,340 +1045,498 @@
     </div>
 </div>
 
-        <section id="zen-zone" class="bg-gradient-to-br from-candy-lightBlue via-white to-candy-lightPink border-3 border-candy-pink rounded-[3rem] p-6 sm:p-12 space-y-8 relative overflow-hidden shadow-[0_12px_0_rgba(255,183,202,0.2)] scroll-mt-24 mb-16">
-    <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-candy-yellow/20 rounded-full blur-2xl"></div>
-    
-    <div class="text-center space-y-2">
-        <span class="text-candy-hotPink font-cute font-bold text-sm tracking-widest block">🧘 MINDFUL / 禅 ☁️</span>
-        <h2 class="text-3xl sm:text-4xl font-cute font-bold text-candy-dark">
-            <span class="lang-vi-text">Trạm Dừng Chân Bình Yên Của Anh Thư 🌸</span>
-            <span class="lang-en-text">Anh Thư's Zen Safe Haven 🌸</span>
-        </h2>
-        <div class="p-4 bg-white/70 backdrop-blur-sm rounded-2xl max-w-2xl mx-auto border border-candy-pink/35 text-xs sm:text-sm text-candy-dark/95 leading-relaxed font-sans font-semibold">
-            <p class="lang-vi-text">
-                Mình là một cô gái nhạy cảm, nhiều nội tâm, sống sâu sắc và cực kỳ thích suy nghĩ. Từ một vấn đề rất đơn thuần, qua bộ não của mình đôi khi nó trở nên phức tạp vô cùng. Tuy đây là nền tảng tuyệt vời giúp mình luôn có ý tưởng sáng tạo độc đáo để hoàn thành công việc tốt hơn, nhưng đôi lúc việc suy nghĩ quá mức cũng khiến mình rơi vào trạng thái "khổ sở", lo âu hay tiêu cực. Trạm này được lập ra để giúp tụi mình cùng buông bỏ điều đó! ✨
-            </p>
-            <p class="lang-en-text">
-                I am an empathetic, sensitive soul with deep inner thoughts. Simple matters often branch into complex networks inside my mind. While this provides the perfect foundation for outstanding creative ideas, overthinking can sometimes lead to anxiety, stress, or negativity. This corner was built to help us release those heavy thoughts together! ✨
-            </p>
-        </div>
-        <div class="w-16 h-1 bg-candy-pink mx-auto mt-3"></div>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 font-sans">
-        
-        <div class="bg-white/95 rounded-[2.5rem] p-6 border-3 border-candy-pink flex flex-col items-center justify-between min-h-[350px] shadow-sm">
-            <div class="text-center space-y-1">
-                <span class="text-[10px] font-extrabold text-candy-hotPink uppercase tracking-wider font-cute">Breathing Buddy / 调息</span>
-                <p id="breath-instruction" class="text-xs font-bold text-candy-dark/80">
-                    <span class="lang-vi-text">Click nút bên dưới để bắt đầu nhịp thở thư giãn nhé</span>
-                    <span class="lang-en-text">Click the button below to align your breathing</span>
-                </p>
-            </div>
-
-            <div class="relative w-36 h-36 flex items-center justify-center">
-                <div id="breath-circle" class="absolute w-20 h-20 rounded-full bg-candy-pink/20 border-3 border-dashed border-candy-pink transition-all duration-[2500ms]"></div>
-                <span id="breath-text" class="relative z-10 font-cute font-bold text-candy-hotPink text-xs sm:text-sm">
-                    <span class="lang-vi-text">Bình yên</span>
-                    <span class="lang-en-text">Peace</span>
-                </span>
-            </div>
-
-            <button onclick="toggleBreathing()" id="btn-breathe" class="px-6 py-3 rounded-full bg-candy-hotPink text-white font-cute font-bold text-xs shadow-[0_5px_0_#C23B55] hover:translate-y-0.5 hover:shadow-[0_1px_0_#C23B55] transition-all">
-                <span class="lang-vi-text">Bắt đầu thở 🌸</span>
-                <span class="lang-en-text">Start breathing 🌸</span>
-            </button>
-        </div>
-
-        <div class="bg-white/95 rounded-[2.5rem] p-6 border-3 border-candy-blue/60 flex flex-col justify-between min-h-[350px] shadow-sm">
-            <div class="space-y-1">
-                <span class="text-[10px] font-extrabold text-candy-skyBlue uppercase tracking-wider font-cute">Let-It-Go Box / 释怀 🎈</span>
-                <h4 class="font-cute font-bold text-base text-candy-dark">
-                    <span class="lang-vi-text">Trút bỏ suy nghĩ quá tải</span>
-                    <span class="lang-en-text">Drop your heavy thoughts</span>
-                </h4>
-                <p class="text-xs text-candy-dark/85 font-medium leading-relaxed">
-                    <span class="lang-vi-text">Hãy viết ra điều đang đè nặng trong trái tim bạn lúc này, tớ sẽ cùng bạn hóa nó thành bong bóng bay mất tiêu nhé! ✨</span>
-                    <span class="lang-en-text">Write down whatever weighs you down at this moment, and let's watch it dissolve into empty air together! ✨</span>
-                </p>
-            </div>
-
-            <div class="my-4 relative">
-                <textarea id="worry-input" rows="3" class="w-full text-xs font-semibold rounded-2xl p-4 border-2 border-candy-blue/30 focus:outline-none focus:ring-2 focus:ring-candy-skyBlue bg-candy-lightBlue/30 text-candy-dark placeholder-candy-dark/50" placeholder="Tớ lo lắng về chuyện... (Type your worries here...)"></textarea>
-                
-                <div id="worry-success" class="hidden absolute inset-0 bg-white flex flex-col items-center justify-center text-center p-4 rounded-2xl border-2 border-dashed border-candy-skyBlue z-10">
-                    <span class="text-3xl animate-bounce">🎈</span>
-                    <p class="text-xs font-bold text-candy-skyBlue font-cute mt-2 leading-relaxed">
-                        <span class="lang-vi-text">Nó đã biến mất rồi! Nhẹ lòng hơn nhé, mọi chuyện rồi sẽ ổn thôi! ✨</span>
-                        <span class="lang-en-text">It faded into the wind! Take a slow breath, you are safe! ✨</span>
+      
+        <section id="zen-zone" class="bg-gradient-to-br from-candy-lightBlue via-white to-candy-lightPink border-3 border-candy-pink rounded-[3rem] p-6 sm:p-12 space-y-8 relative overflow-hidden shadow-[0_12px_0_rgba(255,183,202,0.2)] scroll-mt-24">
+            <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-candy-yellow/20 rounded-full blur-2xl"></div>
+            
+            <div class="text-center space-y-2">
+                <span class="text-candy-hotPink font-cute font-bold text-sm tracking-widest block">🧘 MINDFUL / 禅 ☁️</span>
+                <h2 class="text-3xl sm:text-4xl font-cute font-bold text-candy-dark">
+                    <span class="lang-vi-text">Trạm Dừng Chân Bình Yên Của Anh Thư 🌸</span>
+                    <span class="lang-en-text">Anh Thư's Zen Safe Haven 🌸</span>
+                </h2>
+                <div class="p-4 bg-white/70 backdrop-blur-sm rounded-2xl max-w-2xl mx-auto border border-candy-pink/35 text-xs sm:text-sm text-candy-dark/95 leading-relaxed font-sans font-semibold">
+                    <p class="lang-vi-text">
+                        Mình là một cô gái nhạy cảm, nhiều nội tâm, sống sâu sắc và cực kỳ thích suy nghĩ. Từ một vấn đề rất đơn thuần, qua bộ não của mình đôi khi nó trở nên phức tạp vô cùng. Tuy đây là nền tảng tuyệt vời giúp mình luôn có ý tưởng sáng tạo độc đáo để hoàn thành công việc tốt hơn, nhưng đôi lúc việc suy nghĩ quá mức cũng khiến mình rơi vào trạng thái "khổ sở", lo âu hay tiêu cực. Trạm này được lập ra để giúp tụi mình cùng buông bỏ điều đó! ✨
+                    </p>
+                    <p class="lang-en-text">
+                        I am an empathetic, sensitive soul with deep inner thoughts. Simple matters often branch into complex networks inside my mind. While this provides the perfect foundation for outstanding creative ideas, overthinking can sometimes lead to anxiety, stress, or negativity. This corner was built to help us release those heavy thoughts together! ✨
                     </p>
                 </div>
+                <div class="w-16 h-1 bg-candy-pink mx-auto mt-3"></div>
             </div>
 
-            <div class="flex items-center justify-between">
-                <span class="text-[10px] text-candy-dark/50 font-bold font-cute">#SaveYourself</span>
-                <button onclick="dissolveWorry()" class="px-5 py-2.5 rounded-full bg-candy-dark text-white font-cute font-bold text-xs shadow-[0_4px_0_#1E1517] hover:translate-y-0.5 hover:shadow-[0_1px_0_#1E1517] transition-all">
-                    <span class="lang-vi-text">Thả Trôi 🎈</span>
-                    <span class="lang-en-text">Let It Go 🎈</span>
-                </button>
+            <!-- Interative widgets -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 font-sans">
+                
+                <!-- Zen Coach Breathing Tool -->
+                <div class="bg-white/95 rounded-[2.5rem] p-6 border-3 border-candy-pink flex flex-col items-center justify-between min-h-[350px] shadow-sm">
+                    <div class="text-center space-y-1">
+                        <span class="text-[10px] font-extrabold text-candy-hotPink uppercase tracking-wider font-cute">Breathing Buddy / 调息</span>
+                        <p id="breath-instruction" class="text-xs font-bold text-candy-dark/80">
+                            <span class="lang-vi-text">Click nút bên dưới để bắt đầu nhịp thở thư giãn nhé</span>
+                            <span class="lang-en-text">Click the button below to align your breathing</span>
+                        </p>
+                    </div>
+
+                    <!-- Visual Breathing circle -->
+                    <div class="relative w-36 h-36 flex items-center justify-center">
+                        <div id="breath-circle" class="absolute w-20 h-20 rounded-full bg-candy-pink/20 border-3 border-dashed border-candy-pink transition-all duration-[2500ms]"></div>
+                        <span id="breath-text" class="relative z-10 font-cute font-bold text-candy-hotPink text-xs sm:text-sm">
+                            <span class="lang-vi-text">Bình yên</span>
+                            <span class="lang-en-text">Peace</span>
+                        </span>
+                    </div>
+
+                    <button onclick="toggleBreathing()" id="btn-breathe" class="px-6 py-3 rounded-full bg-candy-hotPink text-white font-cute font-bold text-xs shadow-[0_5px_0_#C23B55] hover:translate-y-0.5 hover:shadow-[0_1px_0_#C23B55] transition-all">
+                        <span class="lang-vi-text">Bắt đầu thở 🌸</span>
+                        <span class="lang-en-text">Start breathing 🌸</span>
+                    </button>
+                </div>
+
+                <!-- Overthinker Let-It-Go Box -->
+                <div class="bg-white/95 rounded-[2.5rem] p-6 border-3 border-candy-blue/60 flex flex-col justify-between min-h-[350px] shadow-sm">
+                    <div class="space-y-1">
+                        <span class="text-[10px] font-extrabold text-candy-skyBlue uppercase tracking-wider font-cute">Let-It-Go Box / 释怀 🎈</span>
+                        <h4 class="font-cute font-bold text-base text-candy-dark">
+                            <span class="lang-vi-text">Trút bỏ suy nghĩ quá tải</span>
+                            <span class="lang-en-text">Drop your heavy thoughts</span>
+                        </h4>
+                        <p class="text-xs text-candy-dark/85 font-medium leading-relaxed">
+                            <span class="lang-vi-text">Hãy viết ra điều đang đè nặng trong trái tim bạn lúc này, tớ sẽ cùng bạn hóa nó thành bong bóng bay mất tiêu nhé! ✨</span>
+                            <span class="lang-en-text">Write down whatever weighs you down at this moment, and let's watch it dissolve into empty air together! ✨</span>
+                        </p>
+                    </div>
+
+                    <div class="my-4 relative">
+                        <textarea id="worry-input" rows="3" class="w-full text-xs font-semibold rounded-2xl p-4 border-2 border-candy-blue/30 focus:outline-none focus:ring-2 focus:ring-candy-skyBlue bg-candy-lightBlue/30 text-candy-dark placeholder-candy-dark/50" placeholder="Tớ lo lắng về chuyện... (Type your worries here...)"></textarea>
+                        
+                        <!-- Dissolve effect overlay message -->
+                        <div id="worry-success" class="hidden absolute inset-0 bg-white flex flex-col items-center justify-center text-center p-4 rounded-2xl border-2 border-dashed border-candy-skyBlue">
+                            <span class="text-3xl animate-bounce">🎈</span>
+                            <p class="text-xs font-bold text-candy-skyBlue font-cute mt-2 leading-relaxed">
+                                <span class="lang-vi-text">Nó đã biến mất rồi! Nhẹ lòng hơn nhé, mọi chuyện rồi sẽ ổn thôi! ✨</span>
+                                <span class="lang-en-text">It faded into the wind! Take a slow breath, you are safe! ✨</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <span class="text-[10px] text-candy-dark/50 font-bold font-cute">#SaveYourself</span>
+                        <button onclick="dissolveWorry()" class="px-5 py-2.5 rounded-full bg-candy-dark text-white font-cute font-bold text-xs shadow-[0_4px_0_#1E1517] hover:translate-y-0.5 hover:shadow-[0_1px_0_#1E1517] transition-all">
+                            <span class="lang-vi-text">Thả Trôi 🎈</span>
+                            <span class="lang-en-text">Let It Go 🎈</span>
+                        </button>
+                    </div>
+                </div>
+
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section id="testimonials" class="space-y-8 mb-16">
-    <div class="text-center space-y-2">
-        <span class="text-candy-hotPink font-cute font-bold text-sm tracking-widest block">💬 TESTIMONIALS / 评价 🌸</span>
-        <h2 class="text-3xl sm:text-4xl font-cute font-bold text-candy-dark">
-            <span class="lang-vi-text">Mọi Người Nói Gì Về Mình?</span>
-            <span class="lang-en-text">Words from My Circle</span>
-        </h2>
-        <p class="text-xs text-candy-dark/70 font-semibold font-sans italic">
-            <span class="lang-vi-text">(Từ những cuộc họp sau giờ làm, mối quan hệ xung quanh...)</span>
-            <span class="lang-en-text">(From after-work synchups, and people around me...)</span>
-        </p>
-        <div class="w-24 h-1.5 bg-candy-pink/40 mx-auto rounded-full mt-2"></div>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 font-sans font-semibold text-xs leading-relaxed">
-        <div class="bg-white border-3 border-candy-pink rounded-[2rem] p-6 shadow-[0_6px_0_rgba(255,183,202,0.12)] flex flex-col justify-between transform rotate-1 hover:rotate-0 transition-transform">
-            <p class="text-xs text-candy-dark/90 italic">
-                <span class="lang-vi-text">"Năng nổ và hoạt bát trong công việc. Luôn là nhân tố khuấy động tinh thần chung."</span>
-                <span class="lang-en-text">"Energetic and active in work. Always the core driving spirit of our events."</span>
-            </p>
-            <div class="pt-4 border-t-2 border-candy-pink/10 mt-4 flex items-center gap-1.5 font-cute text-[10px] font-bold">
-                <span>🌟</span>
-                <span class="text-candy-hotPink">Colleague</span>
-            </div>
-        </div>
-
-        <div class="bg-white border-3 border-candy-blue rounded-[2rem] p-6 shadow-[0_6px_0_rgba(56,189,248,0.12)] flex flex-col justify-between transform -rotate-1 hover:rotate-0 transition-transform">
-            <p class="text-xs text-candy-dark/90 italic">
-                <span class="lang-vi-text">"Biết cách xử lý tình huống và xoay chuyển nhanh nhạy khi có vấn đề phát sinh tại sự kiện."</span>
-                <span class="lang-en-text">"Highly adaptable. Brilliant at troubleshooting when unexpected issues emerge on-field."</span>
-            </p>
-            <div class="pt-4 border-t-2 border-candy-blue/10 mt-4 flex items-center gap-1.5 font-cute text-[10px] font-bold">
-                <span>⚡</span>
-                <span class="text-candy-skyBlue">Project Lead</span>
-            </div>
-        </div>
-
-        <div class="bg-white border-3 border-candy-yellow rounded-[2rem] p-6 shadow-[0_6px_0_rgba(255,245,157,0.15)] flex flex-col justify-between transform rotate-1 hover:rotate-0 transition-transform">
-            <p class="text-xs text-candy-dark/90 italic">
-                <span class="lang-vi-text">"Luôn hỗ trợ đồng nghiệp hết mình, có tinh thần trách nhiệm cực kỳ cao."</span>
-                <span class="lang-en-text">"Suppporting colleagues with full energy, possessing outstanding duty of care."</span>
-            </p>
-            <div class="pt-4 border-t-2 border-candy-yellow/20 mt-4 flex items-center gap-1.5 font-cute text-[10px] font-bold">
-                <span>🎀</span>
-                <span class="text-candy-dark/70">Team Lead</span>
-            </div>
-        </div>
-
-        <div class="bg-white border-3 border-candy-pink rounded-[2rem] p-6 shadow-[0_6px_0_rgba(255,183,202,0.12)] flex flex-col justify-between transform -rotate-1 hover:rotate-0 transition-transform">
-            <p class="text-xs text-candy-dark/90 italic">
-                <span class="lang-vi-text">"Tâm lý vững, thích nghi nhanh với cường độ làm việc của các sự kiện lớn nhỏ."</span>
-                <span class="lang-en-text">"Mentally resilient, adapting swiftly to high-pressure workloads."</span>
-            </p>
-            <div class="pt-4 border-t-2 border-candy-pink/10 mt-4 flex items-center gap-1.5 font-cute text-[10px] font-bold">
-                <span>🌸</span>
-                <span class="text-candy-hotPink">Executive Client</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="contact" class="scroll-mt-24 max-w-4xl mx-auto mb-16">
-    <div class="bg-white border-3 border-candy-pink rounded-[3rem] overflow-hidden shadow-[0_12px_0_rgba(255,183,202,0.25)] grid grid-cols-1 md:grid-cols-12">
-        
-        <div class="md:col-span-5 bg-candy-dark text-white p-8 flex flex-col justify-between space-y-8 relative">
-            <div class="absolute top-6 right-6 text-4xl opacity-15 transform rotate-12">✉️</div>
-            
-            <div class="space-y-4 font-sans">
-                <h3 class="text-2xl sm:text-3xl font-cute font-bold text-candy-pink tracking-tight">
-                    <span class="lang-vi-text">Hẹn Gặp Bạn Nha! 💌</span>
-                    <span class="lang-en-text">Let's Connect! 💌</span>
-                </h3>
-                <p class="text-xs sm:text-sm text-white/85 font-semibold leading-relaxed">
-                    <span class="lang-vi-text">Bạn muốn cộng tác trong một dự án truyền thông sáng tạo, hay chỉ đơn giản là trò chuyện về tiếng Trung và sự tỉnh thức? Đừng ngại nhắn tin cho mình nhé !</span>
-                    <span class="lang-en-text">Whether you want to build a creative media project together, or simply have a warm conversation about Chinese language and mindfulness? Drop me a line!</span>
+        <section id="testimonials" class="space-y-8">
+            <div class="text-center space-y-2">
+                <span class="text-candy-hotPink font-cute font-bold text-sm tracking-widest block">💬 TESTIMONIALS / 评价 🌸</span>
+                <h2 class="text-3xl sm:text-4xl font-cute font-bold text-candy-dark">
+                    <span class="lang-vi-text">Mọi Người Nói Gì Về Mình?</span>
+                    <span class="lang-en-text">Words from My Circle</span>
+                </h2>
+                <p class="text-xs text-candy-dark/70 font-semibold font-sans italic">
+                    <span class="lang-vi-text">(Từ những cuộc họp sau giờ làm, mối quan hệ xung quanh...)</span>
+                    <span class="lang-en-text">(From after-work synchups, and people around me...)</span>
                 </p>
+                <div class="w-24 h-1.5 bg-candy-pink/40 mx-auto rounded-full mt-2"></div>
             </div>
 
-            <div class="space-y-3.5 text-xs font-bold font-sans">
-                <a href="https://www.facebook.com/fishcocain/" target="_blank" class="flex items-center gap-3 text-white/80 hover:text-white transition-colors group">
-                    <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-candy-pink transition-all"><i class="fa-brands fa-facebook-f"></i></span>
-                    <span>facebook.com/fishcocain</span>
-                </a>
-                <a href="https://www.tiktok.com/@caconitu" target="_blank" class="flex items-center gap-3 text-white/80 hover:text-white transition-colors group">
-                    <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-candy-pink transition-all"><i class="fa-brands fa-tiktok"></i></span>
-                    <span>@caconitu (Cá Con)</span>
-                </a>
-                <a href="https://www.youtube.com/@anhthumai6525" target="_blank" class="flex items-center gap-3 text-white/80 hover:text-white transition-colors group">
-                    <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-candy-pink transition-all"><i class="fa-brands fa-youtube"></i></span>
-                    <span>youtube.com/anhthumai</span>
-                </a>
-            </div>
-
-            <div class="pt-4 border-t border-white/10 text-[10px] text-candy-pink font-bold flex items-center justify-between font-cute">
-                <span>🌸 @fishcocain</span>
-                <span>保持热爱, 奔赴山海 ⭐</span>
-            </div>
-        </div>
-
-        <div class="md:col-span-7 p-8 space-y-6">
-            <h4 class="font-cute font-bold text-lg text-candy-dark">
-                <span class="lang-vi-text">Gửi lời nhắn siêu tốc! 👋</span>
-                <span class="lang-en-text">Send a fast bubble mail! 👋</span>
-            </h4>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-sans">
-                <button onclick="copyMail('maianhthukupii@gmail.com')" class="p-3.5 rounded-2xl bg-candy-lightPink border-2 border-candy-pink/30 hover:border-candy-pink text-left transition-all relative group">
-                    <span class="block text-[9px] uppercase tracking-wider text-candy-hotPink font-extrabold">Primary Email</span>
-                    <span class="block text-xs font-bold text-candy-dark mt-1 truncate">maianhthukupii@gmail.com</span>
-                    <span class="absolute right-3.5 bottom-3 text-sm text-candy-pink group-hover:scale-125 transition-transform"><i class="fa-regular fa-copy"></i></span>
-                </button>
-                
-                <button onclick="copyPhone()" class="p-3.5 rounded-2xl bg-candy-lightBlue border-2 border-candy-blue/40 hover:border-candy-skyBlue text-left transition-all relative group">
-                    <span class="block text-[9px] uppercase tracking-wider text-candy-skyBlue font-extrabold">Zalo / Phone</span>
-                    <span class="block text-xs font-bold text-candy-dark mt-1 truncate">0379 966 033</span>
-                    <span class="absolute right-3.5 bottom-3 text-sm text-candy-skyBlue group-hover:scale-125 transition-transform"><i class="fa-regular fa-copy"></i></span>
-                </button>
-            </div>
-
-            <div class="flex items-center justify-between p-3.5 rounded-2xl bg-candy-cream border border-candy-yellow/60">
-                <span class="text-[10px] font-bold text-candy-dark/60 font-sans uppercase">Backup Email</span>
-                <div class="flex items-center gap-2">
-                    <span class="text-xs font-bold text-candy-dark font-sans">vvtt.2208@gmail.com</span>
-                    <button onclick="copyMail('vvtt.2208@gmail.com')" class="text-candy-dark/40 hover:text-candy-dark"><i class="fa-regular fa-copy text-sm"></i></button>
-                </div>
-            </div>
-
-            <div id="toast-message" class="hidden p-3 bg-candy-hotPink text-white text-xs font-bold text-center rounded-2xl transition-all duration-300">
-                Copied successfully to clipboard! 🎀
-            </div>
-
-            <form onsubmit="handleContactSubmit(event)" class="space-y-4 pt-1 font-sans font-semibold text-xs">
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="space-y-1">
-                        <label class="text-[9px] font-bold text-candy-dark/60 uppercase">Name</label>
-                        <input type="text" required class="w-full text-xs rounded-xl p-3.5 border-2 border-candy-pink/20 focus:outline-none focus:border-candy-pink bg-candy-cream/40" placeholder="Your name">
-                    </div>
-                    <div class="space-y-1">
-                        <label class="text-[9px] font-bold text-candy-dark/60 uppercase">Email / Contact info</label>
-                        <input type="text" required class="w-full text-xs rounded-xl p-3.5 border-2 border-candy-pink/20 focus:outline-none focus:border-candy-pink bg-candy-cream/40" placeholder="How to reach you">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 font-sans font-semibold text-xs leading-relaxed">
+                <!-- Card 1 -->
+                <div class="bg-white border-3 border-candy-pink rounded-[2rem] p-6 shadow-[0_6px_0_rgba(255,183,202,0.12)] flex flex-col justify-between transform rotate-1 hover:rotate-0 transition-transform">
+                    <p class="text-xs text-candy-dark/90 italic">
+                        <span class="lang-vi-text">"Năng nổ và hoạt bát trong công việc. Luôn là nhân tố khuấy động tinh thần chung."</span>
+                        <span class="lang-en-text">"Energetic and active in work. Always the core driving spirit of our events."</span>
+                    </p>
+                    <div class="pt-4 border-t-2 border-candy-pink/10 mt-4 flex items-center gap-1.5 font-cute text-[10px] font-bold">
+                        <span>🌟</span>
+                        <span class="text-candy-hotPink">Colleague</span>
                     </div>
                 </div>
-                <div class="space-y-1">
-                    <label class="text-[9px] font-bold text-candy-dark/60 uppercase">Message</label>
-                    <textarea rows="3" required class="w-full text-xs rounded-xl p-3.5 border-2 border-candy-pink/20 focus:outline-none focus:border-candy-pink bg-candy-cream/40" placeholder="Hi Thư, let's collaborate on..."></textarea>
+
+                <!-- Card 2 -->
+                <div class="bg-white border-3 border-candy-blue rounded-[2rem] p-6 shadow-[0_6px_0_rgba(56,189,248,0.12)] flex flex-col justify-between transform -rotate-1 hover:rotate-0 transition-transform">
+                    <p class="text-xs text-candy-dark/90 italic">
+                        <span class="lang-vi-text">"Biết cách xử lý tình huống và xoay chuyển nhanh nhạy khi có vấn đề phát sinh tại sự kiện."</span>
+                        <span class="lang-en-text">"Highly adaptable. Brilliant at troubleshooting when unexpected issues emerge on-field."</span>
+                    </p>
+                    <div class="pt-4 border-t-2 border-candy-blue/10 mt-4 flex items-center gap-1.5 font-cute text-[10px] font-bold">
+                        <span>⚡</span>
+                        <span class="text-candy-skyBlue">Project Lead</span>
+                    </div>
                 </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white border-3 border-candy-yellow rounded-[2rem] p-6 shadow-[0_6px_0_rgba(255,245,157,0.15)] flex flex-col justify-between transform rotate-1 hover:rotate-0 transition-transform">
+                    <p class="text-xs text-candy-dark/90 italic">
+                        <span class="lang-vi-text">"Luôn hỗ trợ đồng nghiệp hết mình, có tinh thần trách nhiệm cực kỳ cao."</span>
+                        <span class="lang-en-text">"Suppporting colleagues with full energy, possessing outstanding duty of care."</span>
+                    </p>
+                    <div class="pt-4 border-t-2 border-candy-yellow/20 mt-4 flex items-center gap-1.5 font-cute text-[10px] font-bold">
+                        <span>🎀</span>
+                        <span class="text-candy-dark/70">Team Lead</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white border-3 border-candy-pink rounded-[2rem] p-6 shadow-[0_6px_0_rgba(255,183,202,0.12)] flex flex-col justify-between transform -rotate-1 hover:rotate-0 transition-transform">
+                    <p class="text-xs text-candy-dark/90 italic">
+                        <span class="lang-vi-text">"Tâm lý vững, thích nghi nhanh với cường độ làm việc của các sự kiện lớn nhỏ."</span>
+                        <span class="lang-en-text">"Mentally resilient, adapting swiftly to high-pressure workloads."</span>
+                    </p>
+                    <div class="pt-4 border-t-2 border-candy-pink/10 mt-4 flex items-center gap-1.5 font-cute text-[10px] font-bold">
+                        <span>🌸</span>
+                        <span class="text-candy-hotPink">Executive Client</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="scroll-mt-24 max-w-4xl mx-auto">
+            <div class="bg-white border-3 border-candy-pink rounded-[3rem] overflow-hidden shadow-[0_12px_0_rgba(255,183,202,0.25)] grid grid-cols-1 md:grid-cols-12">
                 
-                <button type="submit" class="w-full py-3.5 rounded-xl bg-candy-hotPink hover:bg-candy-pink text-white font-cute font-bold text-sm shadow-[0_5px_0_#C23B55] hover:translate-y-0.5 hover:shadow-[0_1px_0_#C23B55] transition-all">
-                    <span class="lang-vi-text">Bắn Tin Nhắn Ngay 🚀</span>
-                    <span class="lang-en-text">Send Message Now 🚀</span>
-                </button>
-            </form>
-        </div>
-    </div>
-</section>
+                <!-- Left Banner information details -->
+                <div class="md:col-span-5 bg-candy-dark text-white p-8 flex flex-col justify-between space-y-8 relative">
+                    <div class="absolute top-6 right-6 text-4xl opacity-15 transform rotate-12">✉️</div>
+                    
+                    <div class="space-y-4 font-sans">
+                        <h3 class="text-2xl sm:text-3xl font-cute font-bold text-candy-pink tracking-tight">
+                            <span class="lang-vi-text">Hẹn Gặp Bạn Nha! 💌</span>
+                            <span class="lang-en-text">Let's Connect! 💌</span>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-white/85 font-semibold leading-relaxed">
+                            <span class="lang-vi-text">Bạn muốn cộng tác trong một dự án truyền thông sáng tạo, hay chỉ đơn giản là trò chuyện về tiếng Trung và sự tỉnh thức? Đừng ngại nhắn tin cho mình nhé !</span>
+                            <span class="lang-en-text">Whether you want to build a creative media project together, or simply have a warm conversation about Chinese language and mindfulness? Drop me a line!</span>
+                        </p>
+                    </div>
 
-<footer class="bg-candy-lightPink/30 border-t-2 border-candy-pink/15 py-10 px-6 mt-16 text-center relative z-10">
-    <div class="max-w-6xl mx-auto space-y-4 font-sans font-bold text-xs">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center space-x-2 font-cute text-2xl">
-                <span class="text-candy-hotPink font-bold">鱼鱼.</span>
-                <span class="text-xs text-candy-dark/50 font-sans font-bold">Mai Anh Thư Portfolio</span>
+                    <!-- Social accounts directory -->
+                    <div class="space-y-3.5 text-xs font-bold font-sans">
+                        <a href="https://www.facebook.com/fishcocain/" target="_blank" class="flex items-center gap-3 text-white/80 hover:text-white transition-colors group">
+                            <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-candy-pink transition-all"><i class="fa-brands fa-facebook-f"></i></span>
+                            <span>facebook.com/fishcocain</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@caconitu" target="_blank" class="flex items-center gap-3 text-white/80 hover:text-white transition-colors group">
+                            <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-candy-pink transition-all"><i class="fa-brands fa-tiktok"></i></span>
+                            <span>@caconitu (Cá Con)</span>
+                        </a>
+                        <a href="https://www.youtube.com/@anhthumai6525" target="_blank" class="flex items-center gap-3 text-white/80 hover:text-white transition-colors group">
+                            <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-candy-pink transition-all"><i class="fa-brands fa-youtube"></i></span>
+                            <span>youtube.com/anhthumai</span>
+                        </a>
+                    </div>
+
+                    <div class="pt-4 border-t border-white/10 text-[10px] text-candy-pink font-bold flex items-center justify-between font-cute">
+                        <span>🌸 @fishcocain</span>
+                        <span>保持热爱, 奔赴山海 ⭐</span>
+                    </div>
+                </div>
+
+                <!-- Right Quick Interactive form & Clipboard slots -->
+                <div class="md:col-span-7 p-8 space-y-6">
+                    <h4 class="font-cute font-bold text-lg text-candy-dark">
+                        <span class="lang-vi-text">Gửi lời nhắn siêu tốc! 👋</span>
+                        <span class="lang-en-text">Send a fast bubble mail! 👋</span>
+                    </h4>
+
+                    <!-- Easy clipboard cards mapping actual user addresses -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-sans">
+                        <!-- Card Email 1 -->
+                        <button onclick="copyMail('maianhthukupii@gmail.com')" class="p-3.5 rounded-2xl bg-candy-lightPink border-2 border-candy-pink/30 hover:border-candy-pink text-left transition-all relative group">
+                            <span class="block text-[9px] uppercase tracking-wider text-candy-hotPink font-extrabold">Primary Email</span>
+                            <span class="block text-xs font-bold text-candy-dark mt-1 truncate">maianhthukupii@gmail.com</span>
+                            <span class="absolute right-3.5 bottom-3 text-sm text-candy-pink group-hover:scale-125 transition-transform"><i class="fa-regular fa-copy"></i></span>
+                        </button>
+                        
+                        <!-- Card Zalo / Mobile -->
+                        <button onclick="copyPhone()" class="p-3.5 rounded-2xl bg-candy-lightBlue border-2 border-candy-blue/40 hover:border-candy-skyBlue text-left transition-all relative group">
+                            <span class="block text-[9px] uppercase tracking-wider text-candy-skyBlue font-extrabold">Zalo / Phone</span>
+                            <span class="block text-xs font-bold text-candy-dark mt-1 truncate">0379 966 033</span>
+                            <span class="absolute right-3.5 bottom-3 text-sm text-candy-skyBlue group-hover:scale-125 transition-transform"><i class="fa-regular fa-copy"></i></span>
+                        </button>
+                    </div>
+
+                    <!-- Alternate Backup Mail container -->
+                    <div class="flex items-center justify-between p-3.5 rounded-2xl bg-candy-cream border border-candy-yellow/60">
+                        <span class="text-[10px] font-bold text-candy-dark/60 font-sans uppercase">Backup Email</span>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-bold text-candy-dark font-sans">vvtt.2208@gmail.com</span>
+                            <button onclick="copyMail('vvtt.2208@gmail.com')" class="text-candy-dark/40 hover:text-candy-dark"><i class="fa-regular fa-copy text-sm"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Alert message popup notification -->
+                    <div id="toast-message" class="hidden p-3 bg-candy-hotPink text-white text-xs font-bold text-center rounded-2xl transition-all duration-300">
+                        Copied successfully to clipboard! 🎀
+                    </div>
+
+                    <!-- Simulation Form structure -->
+                    <form onsubmit="handleContactSubmit(event)" class="space-y-4 pt-1 font-sans font-semibold text-xs">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-1">
+                                <label class="text-[9px] font-bold text-candy-dark/60 uppercase">Name</label>
+                                <input type="text" required class="w-full text-xs rounded-xl p-3.5 border-2 border-candy-pink/20 focus:outline-none focus:border-candy-pink bg-candy-cream/40" placeholder="Your name">
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-[9px] font-bold text-candy-dark/60 uppercase">Email / Contact info</label>
+                                <input type="text" required class="w-full text-xs rounded-xl p-3.5 border-2 border-candy-pink/20 focus:outline-none focus:border-candy-pink bg-candy-cream/40" placeholder="How to reach you">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[9px] font-bold text-candy-dark/60 uppercase">Message</label>
+                            <textarea rows="3" required class="w-full text-xs rounded-xl p-3.5 border-2 border-candy-pink/20 focus:outline-none focus:border-candy-pink bg-candy-cream/40" placeholder="Hi Thư, let's collaborate on..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-candy-hotPink hover:bg-candy-pink text-white font-cute font-bold text-sm shadow-[0_5px_0_#C23B55] hover:translate-y-0.5 hover:shadow-[0_1px_0_#C23B55] transition-all">
+                            <span class="lang-vi-text">Bắn Tin Nhắn Ngay 🚀</span>
+                            <span class="lang-en-text">Send Message Now 🚀</span>
+                        </button>
+                    </form>
+                </div>
             </div>
+        </section>
 
-            <p class="text-xs text-candy-dark/60 font-medium">
-                &copy; 2026 Mai Anh Thư. All rights reserved.
-            </p>
+    </main>
 
-            <div class="text-xs text-candy-pink font-cute font-bold flex gap-3">
-                <span>🎀 #CreativeGenZ</span>
-                <span>🌟 #MindfulFocus</span>
+    <footer class="bg-candy-lightPink/30 border-t-2 border-candy-pink/15 py-10 px-6 mt-16 text-center relative z-10">
+        <div class="max-w-6xl mx-auto space-y-4 font-sans font-bold text-xs">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center space-x-2 font-cute text-2xl">
+                    <span class="text-candy-hotPink font-bold">鱼鱼.</span>
+                    <span class="text-xs text-candy-dark/50 font-sans font-bold">Mai Anh Thư Portfolio</span>
+                </div>
+
+                <p class="text-xs text-candy-dark/60 font-medium">
+                    &copy; 2026 Mai Anh Thư. All rights reserved.
+                </p>
+
+                <div class="text-xs text-candy-pink font-cute font-bold flex gap-3">
+                    <span>🎀 #CreativeGenZ</span>
+                    <span>🌟 #MindfulFocus</span>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<script>
-    // Multi-Language Switch State
-    let currentLang = 'vi';
+    <script>
+        // Multi-Language Switch State
+        let currentLang = 'vi';
 
-    function toggleLanguage() {
-        const body = document.body;
-        const toggleKnob = document.getElementById('lang-toggle-knob');
-        const indicatorVi = document.getElementById('lang-indicator-vi');
-        const indicatorEn = document.getElementById('lang-indicator-en');
+        function toggleLanguage() {
+            const body = document.body;
+            const toggleKnob = document.getElementById('lang-toggle-knob');
+            const indicatorVi = document.getElementById('lang-indicator-vi');
+            const indicatorEn = document.getElementById('lang-indicator-en');
 
-        if (!body) return;
-
-        if (currentLang === 'vi') {
-            currentLang = 'en';
-            body.classList.remove('lang-vi');
-            body.classList.add('lang-en');
-            
-            if (toggleKnob) toggleKnob.style.transform = 'translateX(36px)';
-            if (indicatorVi) {
+            if (currentLang === 'vi') {
+                currentLang = 'en';
+                body.classList.remove('lang-vi');
+                body.classList.add('lang-en');
+                
+                // Slide toggle knob
+                toggleKnob.style.transform = 'translateX(36px)';
                 indicatorVi.classList.add('text-candy-hotPink/30');
                 indicatorVi.classList.remove('text-candy-hotPink');
-            }
-            if (indicatorEn) {
                 indicatorEn.classList.add('text-candy-skyBlue');
                 indicatorEn.classList.remove('text-candy-skyBlue/60');
-            }
-        } else {
-            currentLang = 'vi';
-            body.classList.remove('lang-en');
-            body.classList.add('lang-vi');
-            
-            if (toggleKnob) toggleKnob.style.transform = 'translateX(0px)';
-            if (indicatorVi) {
+            } else {
+                currentLang = 'vi';
+                body.classList.remove('lang-en');
+                body.classList.add('lang-vi');
+                
+                // Slide back
+                toggleKnob.style.transform = 'translateX(0px)';
                 indicatorVi.classList.add('text-candy-hotPink');
                 indicatorVi.classList.remove('text-candy-hotPink/30');
-            }
-            if (indicatorEn) {
                 indicatorEn.classList.add('text-candy-skyBlue/60');
                 indicatorEn.classList.remove('text-candy-skyBlue');
             }
         }
-    }
 
-    // Slideshow Carousel controls for NamHa1720 card
-    let carouselIndex = 0;
-    function toggleCarousel(direction) {
-        const track = document.getElementById('carousel-track');
-        if (!track) return;
-        if (direction === 0) {
-            carouselIndex = carouselIndex === 0 ? 1 : 0;
-        } else {
-            carouselIndex = carouselIndex === 1 ? 0 : 1;
+        // Slideshow Carousel controls for NamHa1720 card
+        let carouselIndex = 0;
+        function toggleCarousel(direction) {
+            const track = document.getElementById('carousel-track');
+            if (direction === 0) {
+                // Prev
+                carouselIndex = carouselIndex === 0 ? 1 : 0;
+            } else {
+                // Next
+                carouselIndex = carouselIndex === 1 ? 0 : 1;
+            }
+            track.style.transform = `translateX(-${carouselIndex * 100}%)`;
         }
-        track.style.transform = `translateX(-${carouselIndex * 100}%)`;
-    }
 
-    // Dynamic Folder Switch logic in the Media directory
-    function switchVideoFolder(folderId) {
-        const folders = ['short-comedy', 'corporate-travel', 'school-projects', 'branding-tvc'];
-        const btnShort = document.getElementById('folder-btn-short');
-        const btnTravel = document.getElementById('folder-btn-travel');
-        const btnSchool = document.getElementById('folder-btn-school');
-        const btnTvc = document.getElementById('folder-btn-tvc');
+        // Dynamic Folder Switch logic in the Media directory
+        function switchVideoFolder(folderId) {
+            const folders = ['short-comedy', 'corporate-travel', 'school-projects', 'branding-tvc'];
+            const btnShort = document.getElementById('folder-btn-short');
+            const btnTravel = document.getElementById('folder-btn-travel');
+            const btnSchool = document.getElementById('folder-btn-school');
+            const btnTvc = document.getElementById('folder-btn-tvc');
 
-        // Hide all folders
-        folders.forEach(fid => {
-            const el = document.getElementById(`folder-${fid}`);
-            if (el) el.classList.add('hidden');
-        });
+            // Hide all folders
+            folders.forEach(fid => {
+                document.getElementById(`folder-${fid}`).classList.add('hidden');
+            });
 
-        // Reset tab designs
-        const resetBtn = (btn) => {
-            if (btn) btn.className = "px-4 py-2 rounded-t-xl bg-white text-candy-dark border border-candy-pink/40 hover:bg-candy-lightPink transition-all";
+            // Reset tab designs
+            const resetBtn = (btn) => {
+                btn.className = "px-4 py-2 rounded-t-xl bg-white text-candy-dark border border-candy-pink/40 hover:bg-candy-lightPink transition-all";
+            }
+            resetBtn(btnShort);
+            resetBtn(btnTravel);
+            resetBtn(btnSchool);
+            resetBtn(btnTvc);
+
+            // Activate active folder & update button appearance
+            document.getElementById(`folder-${folderId}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`folder-btn-${folderId.split('-')[0]}`);
+            activeBtn.className = "px-4 py-2 rounded-t-xl bg-candy-pink text-white transition-all shadow-sm";
         }
-        resetBtn(btnShort);
-        resetBtn(btnTravel);
-        resetBtn(btnSchool);
-        resetBtn(btnTvc);
 
-/html
+        // Project Category Filter
+        function filterProjects(category) {
+            const tabs = ['all', 'media', 'events', 'social'];
+            
+            tabs.forEach(tab => {
+                const element = document.getElementById(`tab-${tab}`);
+                if (tab === category) {
+                    element.className = "px-5 py-2.5 rounded-full bg-candy-hotPink text-white transition-all shadow-md";
+                } else {
+                    let borderCol = "border-candy-pink/30 hover:bg-candy-lightPink";
+                    if (tab === 'events') borderCol = "border-candy-skyBlue/30 hover:bg-candy-lightBlue";
+                    if (tab === 'social') borderCol = "border-candy-yellow hover:bg-candy-cream";
+                    
+                    element.className = `px-5 py-2.5 rounded-full bg-white text-candy-dark border-3 ${borderCol} transition-all`;
+                }
+            });
+
+            const cards = document.getElementsByClassName('project-card');
+            for (let i = 0; i < cards.length; i++) {
+                const card = cards[i];
+                if (category === 'all') {
+                    card.style.display = 'flex';
+                } else if (card.classList.contains(`filter-${category}`)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        }
+
+        // Interactive Zen Breath Control
+        let isBreathing = false;
+        let breathingTimer = null;
+
+        function toggleBreathing() {
+            const circle = document.getElementById('breath-circle');
+            const text = document.getElementById('breath-text');
+            const instruction = document.getElementById('breath-instruction');
+            const btn = document.getElementById('btn-breathe');
+
+            if (!isBreathing) {
+                isBreathing = true;
+                circle.classList.add('breathing-active');
+                btn.innerHTML = currentLang === 'vi' ? 'Dừng lại nha 🌸' : 'Stop now 🌸';
+
+                let step = 0;
+                function cycleBreathe() {
+                    if (step === 0) {
+                        text.innerHTML = currentLang === 'vi' ? 'Hít Vào' : 'Inhale';
+                        instruction.innerHTML = currentLang === 'vi' ? 'Hít thật sâu chậm rãi bằng mũi, đón nhận luồng không khí thanh mát... 🌊' : 'Slowly draw air through your nose, accept pure peace... 🌊';
+                        circle.style.transform = "scale(1.4)";
+                        step = 1;
+                    } else {
+                        text.innerHTML = currentLang === 'vi' ? 'Thở Ra' : 'Exhale';
+                        instruction.innerHTML = currentLang === 'vi' ? 'Nhẹ nhàng thở ra bằng miệng, buông bỏ mọi căng thẳng đè nén... ✨' : 'Slowly let go through your mouth, release all tension... ✨';
+                        circle.style.transform = "scale(1)";
+                        step = 0;
+                    }
+                }
+                cycleBreathe();
+                breathingTimer = setInterval(cycleBreathe, 2500);
+            } else {
+                isBreathing = false;
+                circle.classList.remove('breathing-active');
+                circle.style.transform = "scale(1)";
+                clearInterval(breathingTimer);
+                
+                text.innerHTML = currentLang === 'vi' ? 'Bình yên' : 'Peace';
+                instruction.innerHTML = currentLang === 'vi' ? 'Click nút bên dưới để bắt đầu nhịp thở thư giãn nhé' : 'Click the button below to align your breathing';
+                btn.innerHTML = currentLang === 'vi' ? 'Bắt đầu thở 🌸' : 'Start breathing 🌸';
+            }
+        }
+
+        // Let-It-Go Box Fade Animation
+        function dissolveWorry() {
+            const input = document.getElementById('worry-input');
+            const success = document.getElementById('worry-success');
+
+            if (!input.value.trim()) return;
+
+            input.style.transform = 'scale(0.75) translateY(-10px)';
+            input.style.opacity = '0';
+            input.style.transition = 'all 0.6s ease';
+
+            setTimeout(() => {
+                success.classList.remove('hidden');
+                success.style.opacity = '1';
+                input.value = '';
+            }, 550);
+
+            setTimeout(() => {
+                success.classList.add('hidden');
+                input.style.transform = 'scale(1) translateY(0px)';
+                input.style.opacity = '1';
+            }, 6000);
+        }
+
+        // Custom Toast system
+        function triggerToast(msg) {
+            const toast = document.getElementById('toast-message');
+            toast.innerText = msg;
+            toast.classList.remove('hidden');
+            
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        function copyMail(address) {
+            const shadowInput = document.createElement('input');
+            shadowInput.value = address;
+            document.body.appendChild(shadowInput);
+            shadowInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(shadowInput);
+            
+            triggerToast(currentLang === 'vi' ? 'Đã sao chép địa chỉ Email của Thư! 🎀' : 'Copied email address successfully! 🎀');
+        }
+
+        function copyPhone() {
+            const phone = '0379966033';
+            const shadowInput = document.createElement('input');
+            shadowInput.value = phone;
+            document.body.appendChild(shadowInput);
+            shadowInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(shadowInput);
+            
+            triggerToast(currentLang === 'vi' ? 'Đã sao chép Số điện thoại Zalo của Thư! 📞' : 'Copied phone number successfully! 📞');
+        }
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            triggerToast(currentLang === 'vi' ? 'Tin nhắn đã gửi thành công! Mình sẽ phản hồi bạn sớm nha! 🌸' : 'Message simulated successfully! I will reach out soon! 🌸');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>          
