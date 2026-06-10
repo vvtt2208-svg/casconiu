@@ -4,43 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mai Anh Thư (鱼鱼) - Portfolio</title>
-    <!-- Tailwind CSS -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    
-    <!-- Robust Vietnamese-supported Google Fonts: Comfortaa & Quicksand -->
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        candy: {
-                            pink: '#FFB7CA',      // Pastel Pink
-                            hotPink: '#FF5E7E',   // Vibrant Cheeky Pink
-                            lightPink: '#FFF0F3', // Soft Pink Background
-                            blue: '#B3E5FC',      // Soft Cloud Blue
-                            skyBlue: '#38BDF8',   // Bright Playful Blue
-                            lightBlue: '#E0F2FE', // Airy Blue Background
-                            yellow: '#FFF59D',    // Sweet Butter Yellow
-                            lightYellow: '#FFFDE7', // Creamy Butter Tint
-                            cream: '#FFFDF0',     // Soft Milk-tea Cream
-                            dark: '#3F2B30'       // Soft Chocolate Dark
-                        }
-                    },
-                    fontFamily: {
-                        cute: ['Comfortaa', 'cursive', 'sans-serif'],
-                        sans: ['Quicksand', 'sans-serif']
-                    }
-                }
-            }
+<link rel="stylesheet" href="https://unpkg.com/@tailwindcss/browser@4">
+    <style type="text/css">
+        @theme {
+            --color-candy-pink: #FFB7CA;
+            --color-candy-hotPink: #FF5E7E;
+            --color-candy-lightPink: #FFF0F3;
+            --color-candy-blue: #B3E5FC;
+            --color-candy-skyBlue: #38BDF8;
+            --color-candy-lightBlue: #E0F2FE;
+            --color-candy-yellow: #FFF59D;
+            --color-candy-lightYellow: #FFFDE7;
+            --color-candy-purple: #E1BEE7;
+            --color-candy-textDark: #4A3E4D;
+            --color-candy-textMuted: #8A7A8F;
+            
+            --font-cute: "Comfortaa", cursive;
+            --font-sans: "Quicksand", sans-serif;
+            
+            --animate-float: float 4s ease-in-out infinite;
+            --animate-sparkle: sparkle 2s ease-in-out infinite;
         }
-    </script>
-    
-    <style>
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+    </style>
         body {
             font-family: 'Quicksand', sans-serif;
             background-color: #FFFDF0;
